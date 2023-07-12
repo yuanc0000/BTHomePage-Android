@@ -66,8 +66,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loginUser(String username, String password) {
-
-//user is logged in through firebase verification
+        // Check for hardcoded admin user
+        if (username.equals("admin") && password.equals("1234")) {
+            // Perform any actions necessary for admin login
+            System.out.println("!!admin login for testing");
+            startActivity(new Intent(MainActivity.this, HomePage.class));
+            finish();
+            return;
+        }
+        //user is logged in through firebase verification
         auth.signInWithEmailAndPassword(username, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
@@ -75,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                     //Login successful
                     String userID;
 
-//unique user id is called and path is referenced in firestore
+                    //unique user id is called and path is referenced in firestore
                     userID = auth.getCurrentUser().getUid();
                     FirebaseFirestore fstore = FirebaseFirestore.getInstance();
                     DocumentReference documentReference = fstore.collection("users").document(userID);

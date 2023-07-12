@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bthomepage" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BTHomePage" >
+        <activity android:name=".MatCal" >
+        </activity>
+        <activity android:name=".BackLungs" />
+        <activity android:name=".SideLungs" />
+        <activity android:name=".FrontLungs" />
+        <activity android:name=".OptionsDrainPos" />
+        <activity android:name=".Vibration" />
+        <activity android:name=".HighFreq" />
+        <activity android:name=".BackPerc" />
+        <activity android:name=".ChestPerc" />
+        <activity android:name=".OptionsPV" />
+        <activity android:name=".AutoDrainageStepThree" />
+        <activity android:name=".AutoDrainageStepTwo" />
+        <activity android:name=".AutoDrainageStepOne" />
+        <activity android:name=".ACBTStepThree" />
+        <activity android:name=".ACBTStepTwo" />
+        <activity android:name=".ACBTStepOne" />
+        <activity android:name=".drainpos" />
+        <activity android:name=".PV" />
+        <activity android:name=".Diaphram" />
+        <activity android:name=".AutoDrainage" />
+        <activity android:name=".ACBT" />
+        <activity android:name=".PLBreathing" />
+        <activity android:name=".AsthmaDescript" />
+        <activity android:name=".CBDescript" />
+        <activity android:name=".CFDescript" />
+        <activity android:name=".COPDDescript" />
+        <activity android:name=".Registration" />
+        <activity android:name=".FaqActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".ProgressActivity" />
+        <activity android:name=".DietActivity" />
+        <activity android:name=".LungsActivity" />
+        <activity android:name=".DiagnosisActivity" />
+        <activity android:name=".SplashScreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HomePage"
+            android:parentActivityName=".MainActivity" >
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".MainActivity" />
+<!--        <activity android:name=".MaterialCalendar" />-->
+
+    </application>
+
+</manifest>

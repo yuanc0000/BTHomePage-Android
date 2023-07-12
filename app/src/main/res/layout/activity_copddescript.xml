@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".COPDDescript">
+
+    <TextView
+        android:id="@+id/copdtv"
+        android:layout_width="242dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="68dp"
+        android:gravity="center"
+        android:text="COPD/Emphysema"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView39"
+        android:layout_width="256dp"
+        android:layout_height="126dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="COPD (chronic obstructive pulmonary disease) causes obstructed airflow from the lungs. Emphysema - damage to air sacs so air is not efficiently transferred to the blood -  and chronic bronchitis - damage to bronchial tubes- are contributors to COPD. "
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/copdtv" />
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="259dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Causes: Repeated exposure to irritating gases."
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="255dp"
+        android:layout_height="57dp"
+        android:gravity="center"
+        android:text="Symptoms: Difficulty breathing, cough, mucus, and wheezing.  "
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView40" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="258dp"
+        android:layout_height="79dp"
+        android:gravity="center"
+        android:text="Tests: Lung function tests, chest x-rays, and other tests deemed necessary by the doctor may be performed. "
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="257dp"
+        android:layout_height="81dp"
+        android:gravity="center"
+        android:text="Recommended exercises: ACBT, Autogenic Drainage, Percussions and Vibrations, Drainage Positions, Diaphragmatic Breathing, Pursed Lip Breathing "
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView42" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

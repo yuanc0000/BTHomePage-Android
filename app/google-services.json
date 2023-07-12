@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "581277490989",
+    "firebase_url": "https://breatheeasy-81922-default-rtdb.firebaseio.com",
+    "project_id": "breatheeasy-81922",
+    "storage_bucket": "breatheeasy-81922.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:581277490989:android:00afa7ec68b3efdec87da4",
+        "android_client_info": {
+          "package_name": "com.example.bthomepage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "581277490989-93gjf1ju7hdkuuu24eknl53eoh8i68i0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlUXeswkTnKkTno2bNCFK01r5H_zqicbs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "581277490989-93gjf1ju7hdkuuu24eknl53eoh8i68i0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "581277490989-jmfi7qo7rabbshlpdq35h7rnn76qaup5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "www.emilydu.BTA"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

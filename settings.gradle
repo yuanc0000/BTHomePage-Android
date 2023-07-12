@@ -1,0 +1,2 @@
+rootProject.name = "BTHomePage"
+include ':app'

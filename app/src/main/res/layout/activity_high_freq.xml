@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".HighFreq">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="203dp"
+            android:layout_height="174dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="High Frequency Oscillation Vest"
+            android:textColor="#000000"
+            android:textSize="35sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="260dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="You usually use a high-frequency chest wall oscillator for about five minutes at a time with breaks to allow you to cough and clear out the loosened mucus between sessions."
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="265dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Chest wall oscillator devices are surprisingly non-bulky and streamlined, and there are several different versions on the market, including the Vest Airway Clearance System and the SmartVest."
+            android:textColor="#020202" />
+
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="286dp"
+            android:layout_height="141dp"
+            android:layout_marginTop="20dp"
+
+            app:srcCompat="@drawable/oscillatorimg" />
+
+        <TextView
+            android:id="@+id/textViewLinkAutogenic"
+            android:layout_width="286dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/messageWithOscillatorDescript"
+            android:textColorLink="#000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.436"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="268dp"
+            android:layout_height="91dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:textColor="#000000"
+
+            android:text="You finished! Return to Exercises to complete more trainings and don't forget to log your progress!" />
+
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:onClick="sendMessagesProgress"
+            android:text="Record Progress"
+            android:textColor="#000000"
+            app:backgroundTint="#C5DEEA" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:onClick="sendMessagesExercises"
+            android:text="Return to Exercises"
+            android:textColor="#000000"
+            app:backgroundTint="#C5DEEA" />
+
+    </LinearLayout>
+</ScrollView>

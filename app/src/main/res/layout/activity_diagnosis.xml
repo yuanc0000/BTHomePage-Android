@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/diagnosisActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DiagnosisActivity">
+
+    <Button
+        android:id="@+id/copdbtn"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="92dp"
+        android:onClick="sendMessageCOPD"
+        android:text="COPD/Emphsyema"
+        android:textColor="#020202"
+        android:textSize="12sp"
+        app:backgroundTint="#C5DEEA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diagnosesTitle" />
+
+    <Button
+        android:id="@+id/cysticfibrosisbtn"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
+        android:onClick="sendMessageCF"
+        android:text="Cystic Fibrosis"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:backgroundTint="#C5DEEA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diagnosesTitle" />
+
+    <Button
+        android:id="@+id/chronicbroncbtn"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginBottom="48dp"
+        android:onClick="sendMessageCB"
+        android:text="Chronic Bronchitis"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:backgroundTint="#C5DEEA"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toStartOf="@+id/asthmabtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/asthmabtn"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
+        android:layout_marginBottom="48dp"
+        android:onClick="sendMessageAsthma"
+        android:text="Asthma"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:backgroundTint="#C5DEEA"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/diagnosesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Diagnoses"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav"
+        app:itemIconTint="@drawable/nav_view_colored"
+        app:itemTextColor="@drawable/nav_view_colored"/>
+
+<!--    android:state_checked="true"-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

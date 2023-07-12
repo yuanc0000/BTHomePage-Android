@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeActivity"
+        android:title="Home"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_home"/>
+
+    <item
+        android:id="@+id/diagnosisActivity"
+        android:title="Diagnosis"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_diagnosis"
+        />
+    <item
+        android:id="@+id/exerciseActivity"
+        android:title="Exercises"
+        android:enabled="true"
+        android:visible="true"
+        android:icon="@drawable/ic_launcher_breathe"/>
+
+    <item
+        android:id="@+id/progressActivity"
+        android:title="Progress"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_graph"/>
+    <item
+        android:id="@+id/settingsActivity"
+        android:title="Settings"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_foreground"/>
+
+</menu>

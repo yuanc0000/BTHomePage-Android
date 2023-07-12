@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CFDescript">
+
+    <TextView
+        android:id="@+id/cftv"
+        android:layout_width="242dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="64dp"
+        android:gravity="center"
+        android:text="Cystic Fibrosis"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="243dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Cystic fibrosis is a genetic condition that impacts cells, tissues, and glands. CF results in thick and sticky mucus build up that negatively affects other organs through infections, blockages, and inflammation.  "
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cftv" />
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="242dp"
+        android:layout_height="43dp"
+        android:gravity="center"
+        android:text="Symptoms: Fever, sinus infections, jaundice, and delayed growth.  "
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView44" />
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="264dp"
+        android:layout_height="96dp"
+        android:gravity="center"
+        android:text="Tests: Consult a doctor for the next steps that should be taken. There is not yet a cure of CF, but symptoms can be managed by clearing airways, utilizing medications, and surgery."
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView45" />
+
+    <TextView
+        android:id="@+id/textView47"
+        android:layout_width="260dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginLeft="76dp"
+        android:gravity="center"
+        android:text="Recommended exercises: ACBT, Autogenic Drainage, Percussions and Vibrations, Drainage Positions, Diaphragmatic Breathing, Pursed Lip Breathing "
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView46" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

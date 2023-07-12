@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CBDescript">
+
+    <TextView
+        android:id="@+id/cbtv"
+        android:layout_width="232dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="64dp"
+        android:gravity="center"
+        android:text="Chronic Bronchitis"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView51"
+        android:layout_width="250dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Chronic bronchitis is a condition where the bronchial tubes are inflamed and results in an ongoing cough for several months and comes repeatecly over the years. "
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbtv" />
+
+    <TextView
+        android:id="@+id/textView52"
+        android:layout_width="258dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="Causes: Long term exposure to irritants such as tobacco smoke. Mucus is constantly building up, as a result of the inflamed airways and also contributes to COPD. "
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView51" />
+
+    <TextView
+        android:id="@+id/textView53"
+        android:layout_width="255dp"
+        android:layout_height="93dp"
+        android:gravity="center"
+        android:text="Symptoms: Constant coughing, wheezing and chest pain. It is important to consult a doctor for healthy lifestyle recommendations, medication, and different therapy forms. "
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView52" />
+
+    <TextView
+        android:id="@+id/textView54"
+        android:layout_width="258dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:text="Recommended exercises: ACBT, Autogenic Drainage, Percussions and Vibrations, Drainage Positions, Diaphragmatic Breathing, Pursed Lip Breathing "
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView53" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

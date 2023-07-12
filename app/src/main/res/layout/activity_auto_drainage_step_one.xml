@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".AutoDrainageStepOne">
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="226dp"
+        android:layout_height="173dp"
+        android:layout_marginTop="64dp"
+        android:gravity="center"
+        android:text="Step 1: Dislodge Mucus"
+        android:textColor="#000000"
+        android:textSize="35sp"/>
+
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="254dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="1.Take a small breath through your nose into your lower chest and hold it for three seconds."
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="260dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:text="2. Exhale gently with the same force as if you were sighing, prolonging the breath."/>
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="268dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="3. Repeat several times."
+        android:textColor="#000000" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="279dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:src="@drawable/generalautoimg" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="sendMessagesAutoStepTwo"
+        android:text="Next Step"
+        android:textColor="#000000"
+        app:backgroundTint="#C5DEEA" />
+
+
+
+
+
+</LinearLayout>
+</ScrollView>

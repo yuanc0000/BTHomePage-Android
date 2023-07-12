@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ACBTStepThree">
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="226dp"
+        android:layout_height="173dp"
+        android:layout_marginTop="64dp"
+        android:gravity="center"
+        android:text="Step 3: Controlled Huff Cough"
+        android:textColor="#000000"
+
+        android:textSize="35sp"/>
+
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="254dp"
+        android:layout_height="146dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:textColor="#000000"
+
+        android:text="Huffing involves taking a breath in, holding it, and actively exhaling. Breathing in and holding it enables air to get behind the mucus and separates it from the lung wall so it can be coughed out. This technique also keeps the throat open to effectively move the mucus out of the lungs." />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="260dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:textColor="#000000"
+
+        android:text="Huffing is not as forceful as a cough, but it can work better and be less tiring. Huffing is like exhaling onto a mirror or window to steam it up." />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="268dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:textColor="#000000"
+
+        android:text="Successful huff coughing usually requires about 3-5 repetitions with at least 5-10 normal breaths in between." />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="268dp"
+        android:layout_height="91dp"
+        android:textColor="#000000"
+
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="1. Sit upright in a comfortable seat and lift your chin slightly." />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="268dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="40dp"
+        android:textColor="#000000"
+
+        android:gravity="center"
+        android:text="2. Take a slow, deep breath in, using your diaphragm (belly breaths). Hold your breath for 2-3 seconds, then force the air out through your mouth in three rapid huffs, taking care to keep your throat open." />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="268dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="40dp"
+        android:textColor="#000000"
+
+        android:gravity="center"
+        android:text="3. Repeat the technique, but take a slightly smaller breath this time. You can repeat the huff coughing technique as needed, alternating between small and large breaths." />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="268dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:textColor="#000000"
+
+        android:text="You finished! Return to Exercises to complete more trainings and don't forget to log your progress!" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="sendMessagesProgress"
+        android:text="Record Progress"
+        android:textColor="#000000"
+        app:backgroundTint="#C5DEEA" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="sendMessagesExercises"
+        android:text="Return to Exercises"
+        android:textColor="#000000"
+        app:backgroundTint="#C5DEEA" />
+
+
+
+
+
+</LinearLayout>
+</ScrollView>

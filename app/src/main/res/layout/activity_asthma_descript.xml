@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AsthmaDescript">
+
+    <TextView
+        android:id="@+id/asthmatv"
+        android:layout_width="242dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="68dp"
+        android:gravity="center"
+        android:text="Asthma"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/asthmainfo"
+        android:layout_width="237dp"
+        android:layout_height="172dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Asthma is a chronic condition where lung airways are inflamed and become narrowed at times. Its cause varies depending on the person, but is often the result of the immune system’s response to a substance in the lungs. Depending on the substance, there can be swelling and narrowing of the airways - making it harder to breathe. "
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/asthmatv" />
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="236dp"
+        android:layout_height="86dp"
+        android:gravity="center"
+        android:text="Symptoms: Wheezing, coughing, and chest tightness "
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/asthmainfo" />
+
+    <TextView
+        android:id="@+id/textView49"
+        android:layout_width="237dp"
+        android:layout_height="82dp"
+        android:gravity="center"
+        android:text="Tests: Consult a doctor to identify treatment options such as control medications, short-term medications, and breathing exercises."
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView48" />
+
+    <TextView
+        android:id="@+id/textView50"
+        android:layout_width="246dp"
+        android:layout_height="81dp"
+        android:gravity="center"
+        android:text="Recommended exercises: Diaphragmatic Breathing, Pursed Lip Breathing"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView49" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

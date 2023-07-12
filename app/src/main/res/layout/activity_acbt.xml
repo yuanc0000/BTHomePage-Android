@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".ACBT">
+
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text="ACBT"
+            android:textColor="#000000"
+            android:textSize="35sp" />
+
+
+        <TextView
+            android:id="@+id/textViewLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="@string/messageWithLink"
+            android:textColorLink="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="261dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="Active Cycle of Breathing Technique (ACBT) is a three-step method for clearing mucus from your airways."
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="The first phase helps you relax your airways."
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="263dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="40dp"
+
+            android:gravity="center"
+            android:text="The second phase helps you to get air behind mucus and clears mucus."
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="238dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="The third phase helps force the mucus out of your lungs."
+            android:textColor="#000000" />
+
+
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="308dp"
+            android:layout_height="275dp"
+            android:layout_marginTop="40dp"
+            app:srcCompat="@drawable/acbtgeneralimg" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="sendMessagesteponeACBT"
+            android:text="Proceed to exercise"
+            android:textColor="#000000"
+            app:backgroundTint="#C5DEEA" />
+
+    </LinearLayout>
+</ScrollView>

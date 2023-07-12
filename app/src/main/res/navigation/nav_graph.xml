@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph">
+<!--    app:startDestination="@id/lungsActivity">-->
+
+    <activity
+        android:id="@+id/diagnosisActivity"
+        android:name="com.example.bthomepage.DiagnosisActivity"
+        android:label="activity_diagnosis"
+        tools:layout="@layout/activity_diagnosis" />
+    <activity
+        android:id="@+id/lungsActivity"
+        android:name="com.example.bthomepage.LungsActivity"
+        android:label="activity_lungs"
+        tools:layout="@layout/activity_lungs" />
+    <activity
+        android:id="@+id/dietActivity"
+        android:name="com.example.bthomepage.DietActivity"
+        android:label="activity_diet"
+        tools:layout="@layout/activity_diet" />
+    <activity
+        android:id="@+id/progressActivity"
+        android:name="com.example.bthomepage.ProgressActivity"
+        android:label="activity_progress"
+        tools:layout="@layout/activity_progress" />
+    <activity
+        android:id="@+id/settingsActivity"
+        android:name="com.example.bthomepage.SettingsActivity"
+        android:label="activity_settings"
+        tools:layout="@layout/activity_settings" />
+</navigation>

@@ -56,10 +56,11 @@ public class HomePage extends AppCompatActivity implements BottomNavigationView.
                         startActivity(intent4);
                         break;
 
-                    case R.id.settingsActivity:
-                        Intent intent5 = new Intent(HomePage.this, SettingsActivity.class);
-                        startActivity(intent5);
-                        break;
+
+//                    case R.id.settingsActivity:
+//                        Intent intent5 = new Intent(HomePage.this, SettingsActivity.class);
+//                        startActivity(intent5);
+//                        break;
 
 
                 }
@@ -96,7 +97,7 @@ public class HomePage extends AppCompatActivity implements BottomNavigationView.
 //                Toast.makeText(HomePage.this, "You clicked on ImageView", Toast.LENGTH_LONG).show();
                 startActivity(intentdiet);
             } });
-//click on image leads to progress page
+//click on image leads to progress logging page
         ImageView imgClickProgress;
         imgClickProgress = (ImageView)findViewById(R.id.imgProgress);
         Intent intentprogress = new Intent(this, ProgressActivity.class);
@@ -106,19 +107,19 @@ public class HomePage extends AppCompatActivity implements BottomNavigationView.
 //                Toast.makeText(HomePage.this, "You clicked on ImageView", Toast.LENGTH_LONG).show();
                 startActivity(intentprogress);
             } });
-//click on image leads to settings page
+//click on image leads to calendar page
         ImageView imgClickSettings;
-        imgClickSettings = (ImageView)findViewById(R.id.imgSettings);
-        Intent intentsettings = new Intent(this, SettingsActivity.class);
+        imgClickSettings = (ImageView)findViewById(R.id.imgCalendar);
+        Intent intentCalendar = new Intent(this, MatCal.class);
         imgClickSettings.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v)
             {
 //                Toast.makeText(HomePage.this, "You clicked on ImageView", Toast.LENGTH_LONG).show();
-                startActivity(intentsettings);
+                startActivity(intentCalendar);
             } });
 //click on image leads to faq page
         ImageView imgClickFaq;
-        imgClickFaq = (ImageView)findViewById(R.id.imgFaq);
+        imgClickFaq = (ImageView)findViewById(R.id.imgFAQ);
         Intent intentfaq = new Intent(this, FaqActivity.class);
         imgClickFaq.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v)

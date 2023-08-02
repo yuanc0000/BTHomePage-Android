@@ -29,8 +29,8 @@ public class Vibration extends AppCompatActivity {
     }
     //button leads to exercise page
 
-    public void sendMessagesExercises(View view) {
-        Intent intent = new Intent(this, LungsActivity.class);
+    public void sendMessagesPerc(View view) {
+        Intent intent = new Intent(this, OptionsPV.class);
         startActivity(intent);
     }
 }

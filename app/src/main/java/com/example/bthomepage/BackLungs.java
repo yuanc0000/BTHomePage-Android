@@ -29,8 +29,8 @@ public class BackLungs extends AppCompatActivity {
     }
     //button click leads to exercises page
 
-    public void sendMessagesExercises(View view) {
-        Intent intent = new Intent(this, LungsActivity.class);
+    public void sendMessagesBackDrainPos(View view) {
+        Intent intent = new Intent(this, OptionsDrainPos.class);
         startActivity(intent);
     }
 }

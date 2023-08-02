@@ -26,5 +26,10 @@ public class OptionsDrainPos extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void sendMessagesExercises(View view) {
+        Intent intent = new Intent(this, LungsActivity.class);
+        startActivity(intent);
+    }
+
 
 }

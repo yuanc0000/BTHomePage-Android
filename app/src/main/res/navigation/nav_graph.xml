@@ -25,9 +25,9 @@
         android:name="com.example.bthomepage.ProgressActivity"
         android:label="activity_progress"
         tools:layout="@layout/activity_progress" />
-    <activity
-        android:id="@+id/settingsActivity"
-        android:name="com.example.bthomepage.SettingsActivity"
-        android:label="activity_settings"
-        tools:layout="@layout/activity_settings" />
+<!--    <activity-->
+<!--        android:id="@+id/settingsActivity"-->
+<!--        android:name="com.example.bthomepage.SettingsActivity"-->
+<!--        android:label="activity_settings"-->
+<!--        tools:layout="@layout/activity_settings" />-->
 </navigation>

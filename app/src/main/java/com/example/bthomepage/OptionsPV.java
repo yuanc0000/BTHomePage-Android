@@ -29,4 +29,9 @@ public class OptionsPV extends AppCompatActivity {
         Intent intent = new Intent(this, Vibration.class);
         startActivity(intent);
     }
+
+    public void sendMessagesExercises(View view) {
+        Intent intent = new Intent(this, LungsActivity.class);
+        startActivity(intent);
+    }
 }

@@ -15,8 +15,8 @@ public class BackPerc extends AppCompatActivity {
     }
     //button click leads to progress page
 
-    public void sendMessagesProgress(View view) {
-        Intent intent = new Intent(this, ProgressActivity.class);
+    public void sendMessagesPerc(View view) {
+        Intent intent = new Intent(this, OptionsPV.class);
         startActivity(intent);
     }
     //button click leads to exercise page

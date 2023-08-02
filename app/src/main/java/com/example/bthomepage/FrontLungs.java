@@ -20,8 +20,8 @@ public class FrontLungs extends AppCompatActivity {
     }
     //button click leads to exercise page
 
-    public void sendMessagesExercises(View view) {
-        Intent intent = new Intent(this, LungsActivity.class);
+    public void sendMessagesBackDrainPos(View view) {
+        Intent intent = new Intent(this, OptionsDrainPos.class);
         startActivity(intent);
     }
 }

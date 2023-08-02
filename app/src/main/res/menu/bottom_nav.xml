@@ -25,10 +25,10 @@
         android:title="Progress"
         android:enabled="true"
         android:icon="@drawable/ic_launcher_graph"/>
-    <item
-        android:id="@+id/settingsActivity"
-        android:title="Settings"
-        android:enabled="true"
-        android:icon="@drawable/ic_launcher_foreground"/>
+<!--    <item-->
+<!--        android:id="@+id/settingsActivity"-->
+<!--        android:title="Settings"-->
+<!--        android:enabled="true"-->
+<!--        android:icon="@drawable/ic_launcher_foreground"/>-->
 
 </menu>

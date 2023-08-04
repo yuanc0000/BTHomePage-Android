@@ -73,4 +73,5 @@ dependencies {
 //   implementation 'com.applandeo:material-calendar-view:1.4.0'
 
     implementation 'com.prolificinteractive:material-calendarview:1.4.2'
+    compile 'com.ms-square:expandableTextView:0.1.4'
 }

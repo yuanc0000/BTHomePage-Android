@@ -17,7 +17,7 @@
         android:onClick="sendMessageCOPD"
         android:text="COPD/Emphsyema"
         android:textColor="#020202"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:backgroundTint="#C5DEEA"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/diagnosesTitle" />
@@ -32,7 +32,7 @@
         android:onClick="sendMessageCF"
         android:text="Cystic Fibrosis"
         android:textColor="#000000"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:backgroundTint="#C5DEEA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/diagnosesTitle" />
@@ -47,7 +47,7 @@
         android:onClick="sendMessageCB"
         android:text="Chronic Bronchitis"
         android:textColor="#000000"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:backgroundTint="#C5DEEA"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toStartOf="@+id/asthmabtn"
@@ -64,7 +64,7 @@
         android:onClick="sendMessageAsthma"
         android:text="Asthma"
         android:textColor="#000000"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:backgroundTint="#C5DEEA"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent" />

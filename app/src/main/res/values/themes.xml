@@ -27,4 +27,13 @@
     <style name="Theme.BTHomePage.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.BTHomePage.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="NormalDateStyle">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="LoggedInDateStyle">
+        <item name="android:textColor">@android:color/holo_blue_dark</item>
+    </style>
+
 </resources>

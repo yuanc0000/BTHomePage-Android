@@ -109,6 +109,7 @@ public class FaqActivity extends AppCompatActivity {
                 hide4();
             }
         });
+
     }
 
     // Show and hide methods for FAQ sections
@@ -160,8 +161,11 @@ public class FaqActivity extends AppCompatActivity {
         findViewById(R.id.down4).setVisibility(View.VISIBLE);
     }
 
+    public void sendBack1(View view) {
+        Intent intent = new Intent(this, HomePage.class);
+        startActivity(intent);
+    }
 
-    // Add the method for the button
 }
 
 

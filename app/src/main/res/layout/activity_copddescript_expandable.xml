@@ -289,7 +289,7 @@
             android:layout_below="@+id/questionLayout5"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
-            android:text="ACBT, Autogenic Drainage, Percussions and Vibrations, Drainage Positions, Diaphragmatic Breathing, Pursed Lip Breathing "
+            android:text="ACBT, Autogenic Drainage, Percussions and Vibrations, Drainage Positions, Diaphragmatic Breathing, Pursed Lip Breathing."
             android:textColor="#5A5A5A"
             android:textSize="17sp" />
     </RelativeLayout>

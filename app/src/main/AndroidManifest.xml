@@ -43,6 +43,9 @@
         <activity android:name=".DietActivity" />
         <activity android:name=".LungsActivity" />
         <activity android:name=".DiagnosisActivity" />
+        <activity android:name=".ForgotPassword" />
+        <activity android:name=".EmailActivity" />
+        <activity android:name=".HelpActivity" />
         <activity android:name=".SplashScreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

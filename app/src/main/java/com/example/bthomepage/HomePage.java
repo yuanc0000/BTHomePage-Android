@@ -5,12 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 import android.widget.ImageView;
@@ -19,6 +21,11 @@ import android.widget.Toast;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+
 
 public class HomePage extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
     BottomNavigationView bottomNavigationView;
@@ -120,7 +127,7 @@ public class HomePage extends AppCompatActivity implements BottomNavigationView.
 //click on image leads to faq page
         ImageView imgClickFaq;
         imgClickFaq = (ImageView)findViewById(R.id.imgFAQ);
-        Intent intentfaq = new Intent(this, FaqActivity.class);
+        Intent intentfaq = new Intent(this, HelpActivity.class);
         imgClickFaq.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v)
             {
@@ -129,6 +136,25 @@ public class HomePage extends AppCompatActivity implements BottomNavigationView.
             } });
 
     }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.top_bar, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.action_logout) {
+            FirebaseAuth.getInstance().signOut();
+            Toast.makeText(HomePage.this, "Logged Out", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(HomePage.this, MainActivity.class));
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {

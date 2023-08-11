@@ -72,4 +72,18 @@
         app:layout_constraintTop_toBottomOf="@+id/btnSend"
         app:layout_constraintVertical_bias="0.524" />
 
+    <TextView
+        android:id="@+id/tvUserReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="112dp"
+        android:onClick="sendMessageReset"
+        android:text="Forgot Password?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vUserReg"
+        app:layout_constraintVertical_bias="0.524" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

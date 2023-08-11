@@ -133,7 +133,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Registration.class);
         userReg = (TextView)findViewById(R.id.tvUserReg);
         startActivity(intent);
-
-
+    }
+    public void sendMessageReset(View view) {
+        Intent intent = new Intent(this, ForgotPassword.class);
+        userReg = (TextView)findViewById(R.id.tvUserReset);
+        startActivity(intent);
     }
 }

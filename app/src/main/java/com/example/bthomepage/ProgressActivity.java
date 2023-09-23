@@ -189,38 +189,48 @@ public class ProgressActivity extends AppCompatActivity implements BottomNavigat
     //save progress button adds timestamp value to completedExerciseDates
 
     public void saveProgress(View view) {
+            FirebaseAuth auth = FirebaseAuth.getInstance();
+            FirebaseFirestore fstore = FirebaseFirestore.getInstance();
+            String userID = auth.getCurrentUser().getUid();
+
+            // Get the current date as a string (e.g., "2023-09-23")
+            String currentDate = java.text.DateFormat.getDateInstance().format(new java.util.Date());
+
+            // Create a map to hold the scores
+            Map<String, Object> scoresData = new HashMap<>();
+            scoresData.put("Pursed Lip Breathing Rep Count", minteger);
+            scoresData.put("Position for Drainage Rep Count", minteger1);
+            scoresData.put("Diaphragmatic Breathing Rep Count", minteger2);
+            scoresData.put("ACBT Rep Count", minteger3);
+            scoresData.put("Autogenic Breathing Rep Count", minteger4);
+            scoresData.put("Percussions and Vibrations Rep Count", minteger5);
+
+            // Create a map to hold the scores under the current date
+            Map<String, Object> dateData = new HashMap<>();
+            dateData.put(currentDate, scoresData);
+
+            // Update the Firestore document with the nested map
+            DocumentReference documentReference = fstore.collection("users").document(userID);
+            documentReference
+                    .update(dateData)
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+                            Log.d(TAG, "onSuccess: saved progress data for " + currentDate);
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NotNull Exception e) {
+                            Log.d(TAG, "Failed to save progress data: " + e.toString());
+                        }
+                    });
+        }
 
 
-        int total = minteger + minteger1 + minteger2 + minteger3 + minteger4 + minteger5;
-        String stringtotal = String.valueOf(total);
-
-        FirebaseAuth auth;
-
-        auth = FirebaseAuth.getInstance();
-
-        FirebaseFirestore fstore = FirebaseFirestore.getInstance();
-        String userID;
-
-        userID = auth.getCurrentUser().getUid();
-        DocumentReference documentReference = fstore.collection("users").document(userID);
-        documentReference.update("completedExerciseDates", FieldValue.arrayUnion(java.util.Calendar.getInstance().getTime()))
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
-                        Log.d(TAG, "onSuccess: saved progress date " + userID);
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NotNull Exception e) {
-                Log.d(TAG, "did not save progress date: " + e.toString());
-            }
-        });
 
 
 
-
-
-    }
 
 
     @Override

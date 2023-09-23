@@ -1,3 +1,4 @@
+/*
 package com.example.bthomepage;
 
 import android.os.Bundle;
@@ -58,6 +59,77 @@ public class EmailActivity extends AppCompatActivity {
 //        } else {
 //            Toast.makeText(this, "Failed to send email", Toast.LENGTH_SHORT).show();
 //        }
-//        */
+//
     }
 }
+ */
+package com.example.bthomepage;
+
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.DocumentSnapshot;
+import java.util.Map;
+
+public class EmailActivity extends AppCompatActivity {
+    private static final String TAG = "EmailActivity"; // For logging
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_email_doctor);
+
+        Button sendToUserButton = findViewById(R.id.send_to_user_button);
+
+        sendToUserButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fetchDataFromFirestore();
+            }
+        });
+    }
+
+    private void fetchDataFromFirestore() {
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        FirebaseFirestore fstore = FirebaseFirestore.getInstance();
+        String userID = auth.getCurrentUser().getUid();
+
+        DocumentReference documentReference = fstore.collection("users").document(userID);
+        documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                if (documentSnapshot.exists()) {
+                    for (String date : documentSnapshot.getData().keySet()) {
+                        System.out.println("Date: " + date);
+                        Object dataObj = documentSnapshot.get(date);
+                        if (dataObj instanceof Map) {
+                            Map<String, Long> dataMap = (Map<String, Long>) dataObj;
+                            for (Map.Entry<String, Long> entry : dataMap.entrySet()) {
+                                System.out.println("CNT Name: " + entry.getKey() + ", Value: " + entry.getValue());
+                            }
+                        }
+                    }
+                } else {
+                    Log.d(TAG, "No data found for user.");
+                }
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Log.d(TAG, "Error fetching data: ", e);
+            }
+        });
+    }
+}
+

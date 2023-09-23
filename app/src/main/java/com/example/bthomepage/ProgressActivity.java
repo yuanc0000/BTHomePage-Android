@@ -19,7 +19,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.Future;
@@ -194,7 +196,9 @@ public class ProgressActivity extends AppCompatActivity implements BottomNavigat
             String userID = auth.getCurrentUser().getUid();
 
             // Get the current date as a string (e.g., "2023-09-23")
-            String currentDate = java.text.DateFormat.getDateInstance().format(new java.util.Date());
+            //tring currentDate = java.text.DateFormat.getDateInstance().format(new java.util.Date());
+           SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+           String currentDateTime = sdf.format(new Date());
 
             // Create a map to hold the scores
             Map<String, Object> scoresData = new HashMap<>();
@@ -207,7 +211,7 @@ public class ProgressActivity extends AppCompatActivity implements BottomNavigat
 
             // Create a map to hold the scores under the current date
             Map<String, Object> dateData = new HashMap<>();
-            dateData.put(currentDate, scoresData);
+            dateData.put(currentDateTime, scoresData);
 
             // Update the Firestore document with the nested map
             DocumentReference documentReference = fstore.collection("users").document(userID);
@@ -216,7 +220,7 @@ public class ProgressActivity extends AppCompatActivity implements BottomNavigat
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void unused) {
-                            Log.d(TAG, "onSuccess: saved progress data for " + currentDate);
+                            Log.d(TAG, "onSuccess: saved progress data for " + currentDateTime);
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {

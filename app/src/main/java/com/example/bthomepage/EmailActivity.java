@@ -1,89 +1,21 @@
-/*
 package com.example.bthomepage;
 
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
-
-
-public class EmailActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_email_doctor);
-
-        final EditText doctorEmailEditText = findViewById(R.id.doctor_email_edittext);
-        Button sendToUserButton = findViewById(R.id.send_to_user_button);
-        Button sendToDoctorButton = findViewById(R.id.send_to_doctor_button);
-
-//        sendToUserButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                String userEmail = "user@example.com"; // Replace with actual user email
-//
-//                // get data
-//                String exerciseData = "Exercise data goes here";
-//
-//                // Send email to user
-//                sendEmail(userEmail, "Congratulations on doing your eye exercises! Here are your weekly results:\n\n" + exerciseData);
-//            }
-//        });
-//
-//        sendToDoctorButton.setOnClickListener(new View.OnClickListener() {
-////            @Override
-////            public void onClick(View view) {
-////                final String doctorEmail = doctorEmailEditText.getText().toString().trim();
-////                if (!doctorEmail.isEmpty()) {
-////                    // get user's name and exercise data
-////                    final String userName = "Username"; // user's name
-////                    final String exerciseData = "Exercise data goes here";
-////
-////                    // Send email to doctor
-////                    sendEmail(doctorEmail, "The following are the weekly results from " + userName + ":\n\n" + exerciseData);
-////                } else {
-////                    Toast.makeText(EmailActivity.this, "Please enter the doctor's email", Toast.LENGTH_SHORT).show();
-////                }
-////            }
-////        });
-//    }
-//
-//    private void sendEmail(String recipientEmail, String message) {
-//        // email sending logic
-//        /*
-//        if (emailSentSuccessfully) {
-//            Toast.makeText(this, "Email sent successfully", Toast.LENGTH_SHORT).show();
-//        } else {
-//            Toast.makeText(this, "Failed to send email", Toast.LENGTH_SHORT).show();
-//        }
-//
-    }
-}
- */
-
-
-package com.example.bthomepage;
-
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.DocumentSnapshot;
-
+import com.google.firebase.firestore.FirebaseFirestore;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -92,6 +24,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import androidx.core.content.FileProvider;
+
 
 public class EmailActivity extends AppCompatActivity {
     private static final String TAG = "EmailActivity"; // For logging
@@ -101,7 +35,7 @@ public class EmailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_email_doctor);
 
-        Button sendToUserButton = findViewById(R.id.send_to_user_button);
+        Button sendToUserButton = findViewById(R.id.send_to_doctor_button);
 
         sendToUserButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -132,10 +66,11 @@ public class EmailActivity extends AppCompatActivity {
                         }
                     }
                     String csvContent = generateCSVContent(documentSnapshot);
-                    System.out.println("create csvContent with len ="+csvContent.length());
-                    saveToCSVFile(csvContent);
-                    System.out.println("after call saveToCSVFile(csvContent);");
-
+                    System.out.println("create csvContent with len =" + csvContent.length());
+                    String filePath = saveToCSVFile(csvContent); // Get the file path
+                    if (filePath != null) {
+                        sendEmailWithAttachment(filePath);
+                    }
                 } else {
                     Log.d(TAG, "No data found for user.");
                 }
@@ -148,34 +83,6 @@ public class EmailActivity extends AppCompatActivity {
         });
     }
 
-    /*
-    private String generateCSVContent(DocumentSnapshot documentSnapshot) {
-        StringBuilder csvBuilder = new StringBuilder();
-
-        // Add header with column titles (dates)
-        csvBuilder.append("Exercise Name,");
-        for (String date : documentSnapshot.getData().keySet()) {
-            csvBuilder.append(date).append(",");
-        }
-        csvBuilder.append("\n");
-
-        // Iterate through exercises and fill data
-        String firstDateKey = documentSnapshot.getData().keySet().iterator().next();
-        Map<String, Long> firstDateData = (Map<String, Long>) documentSnapshot.get(firstDateKey);
-        for (String exerciseName : firstDateData.keySet()) {
-            csvBuilder.append(exerciseName).append(",");
-            for (String date : documentSnapshot.getData().keySet()) {
-                Object dataObj = documentSnapshot.get(date);
-                if (dataObj instanceof Map) {
-                    Map<String, Long> dataMap = (Map<String, Long>) dataObj;
-                    csvBuilder.append(dataMap.get(exerciseName)).append(",");
-                }
-            }
-            csvBuilder.append("\n");
-        }
-
-        return csvBuilder.toString();
-    }*/
     private String generateCSVContent(DocumentSnapshot documentSnapshot) {
         StringBuilder csvBuilder = new StringBuilder();
 
@@ -212,22 +119,39 @@ public class EmailActivity extends AppCompatActivity {
         return csvBuilder.toString();
     }
 
-
-    private void saveToCSVFile(String csvContent) {
+    private String saveToCSVFile(String csvContent) {
         String fileName = "exercise_data.csv";
         File file = new File(getExternalFilesDir(null), fileName);
         try (FileOutputStream out = new FileOutputStream(file)) {
             out.write(csvContent.getBytes());
             Log.d(TAG, "Saved to " + file.getAbsolutePath());
-            System.out.println("Saved to " + file.getAbsolutePath());
+            return file.getAbsolutePath(); // Return the file path
         } catch (IOException e) {
             Log.e(TAG, "Error saving CSV file", e);
-            System.out.println("Error saving CSV file "+e);
+            return null;
         }
     }
 
+    private void sendEmailWithAttachment(String filePath) {
+        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+        emailIntent.setType("text/plain");
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{""});
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Exercise Data");
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "The following are the weekly results from [input your preferred name]");
 
+        // Create a content URI for the file using FileProvider
+        Uri fileUri = FileProvider.getUriForFile(this, getApplicationContext().getPackageName() + ".fileprovider", new File(filePath));
 
+        // Grant read permission to the receiving app
+        emailIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        emailIntent.putExtra(Intent.EXTRA_STREAM, fileUri);
+
+        try {
+            startActivity(Intent.createChooser(emailIntent, "Send email..."));
+        } catch (ActivityNotFoundException ex) {
+            Log.e(TAG, "No email clients installed.", ex);
+        }
+    }
 
 }
 

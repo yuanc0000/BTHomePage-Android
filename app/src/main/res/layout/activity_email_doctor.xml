@@ -21,29 +21,11 @@
         android:padding="16dp"/>
 
     <Button
-        android:id="@+id/send_to_user_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Send to User"
-        android:layout_below="@id/privacy_text"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"/>
-
-    <EditText
-        android:id="@+id/doctor_email_edittext"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Doctor's Email"
-        android:layout_below="@id/send_to_user_button"
-        android:layout_marginTop="16dp"
-        android:padding="16dp"/>
-
-    <Button
         android:id="@+id/send_to_doctor_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Send to Doctor"
-        android:layout_below="@id/doctor_email_edittext"
+        android:layout_below="@id/privacy_text"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"/>
 

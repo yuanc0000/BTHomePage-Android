@@ -25,7 +25,7 @@ public class MatCal extends AppCompatActivity {
 
         compactCalendarView = findViewById(R.id.compactcalendar_view);
         compactCalendarView.setFirstDayOfWeek(Calendar.MONDAY);
-        compactCalendarView.setUseThreeLetterAbbreviation(true);  // 使用三个字母的缩写，例如“Mon”代替“Monday”
+        compactCalendarView.setUseThreeLetterAbbreviation(true);
         loginDates = new HashSet<>();
 
         // Simulated list of login dates (replace with actual dates)
@@ -33,6 +33,14 @@ public class MatCal extends AppCompatActivity {
         loginDates.add(calendar.getTimeInMillis()); // Add today's date as an example
         Event ev1 = new Event(Color.GREEN, calendar.getTimeInMillis(), "Logged in on this day");
         compactCalendarView.addEvent(ev1);
+
+        // Define the date you want to highlight (October 17, 2023)
+        Calendar highlightDate = Calendar.getInstance();
+        highlightDate.set(2023, Calendar.OCTOBER, 17);
+
+        // Create an event for the highlight date and set the color
+        Event highlightEvent = new Event(Color.BLUE, highlightDate.getTimeInMillis(), "Highlighted Date");
+        compactCalendarView.addEvent(highlightEvent);
 
         compactCalendarView.setListener(new CompactCalendarView.CompactCalendarViewListener() {
             @Override

@@ -1,43 +1,21 @@
-//import android.os.Bundle;
-//import android.widget.CalendarView;
-//import android.widget.Toast;
-//import androidx.annotation.NonNull;
-//import androidx.appcompat.app.AppCompatActivity;
-//
-//public class MatCal extends AppCompatActivity {
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_calendar_new);
-//
-//        CalendarView calendarView = findViewById(R.id.calendarView);
-//
-//        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-//            @Override
-//            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
-//                // Display the selected date using a Toast
-//                String selectedDate = (month + 1) + "/" + dayOfMonth + "/" + year;
-//                Toast.makeText(MatCal.this, "Selected Date: " + selectedDate, Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//    }
-//}
-
 package com.example.bthomepage;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.CalendarView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+import com.github.sundeepk.compactcalendarview.CompactCalendarView;
+import com.github.sundeepk.compactcalendarview.domain.Event;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashSet;
+import java.util.List;
 
 public class MatCal extends AppCompatActivity {
 
-    private CalendarView calendarView;
+    private CompactCalendarView compactCalendarView;
     private HashSet<Long> loginDates;
 
     @Override
@@ -45,35 +23,39 @@ public class MatCal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar_new);
 
-        calendarView = findViewById(R.id.calendarView);
-        loginDates = new HashSet<>(); // Store login dates as milliseconds
+        compactCalendarView = findViewById(R.id.compactcalendar_view);
+        compactCalendarView.setFirstDayOfWeek(Calendar.MONDAY);
+        compactCalendarView.setUseThreeLetterAbbreviation(true);  // 使用三个字母的缩写，例如“Mon”代替“Monday”
+        loginDates = new HashSet<>();
 
         // Simulated list of login dates (replace with actual dates)
         Calendar calendar = Calendar.getInstance();
         loginDates.add(calendar.getTimeInMillis()); // Add today's date as an example
+        Event ev1 = new Event(Color.GREEN, calendar.getTimeInMillis(), "Logged in on this day");
+        compactCalendarView.addEvent(ev1);
 
-        // Set up the date change listener
-        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+        compactCalendarView.setListener(new CompactCalendarView.CompactCalendarViewListener() {
             @Override
-            public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
-                Calendar selectedDate = Calendar.getInstance();
-                selectedDate.set(year, month, dayOfMonth);
-
-                if (loginDates.contains(selectedDate.getTimeInMillis())) {
+            public void onDayClick(Date dateClicked) {
+                if (loginDates.contains(dateClicked.getTime())) {
                     // Date is logged in
-                    Toast.makeText(MatCal.this, "Logged-in Date: " + selectedDate.getTime(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MatCal.this, "Logged-in Date: " + dateClicked, Toast.LENGTH_SHORT).show();
                 } else {
                     // Date is not logged in
-                    Toast.makeText(MatCal.this, "Normal Date: " + selectedDate.getTime(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MatCal.this, "Normal Date: " + dateClicked, Toast.LENGTH_SHORT).show();
                 }
+            }
+
+            @Override
+            public void onMonthScroll(Date firstDayOfNewMonth) {
+                // You can set the title or do something when the month is changed if needed
+                Toast.makeText(MatCal.this, "Month changed: " + firstDayOfNewMonth, Toast.LENGTH_SHORT).show();
             }
         });
     }
+
     public void sendBack1(View view) {
         Intent intent = new Intent(this, HomePage.class);
         startActivity(intent);
     }
 }
-
-
-

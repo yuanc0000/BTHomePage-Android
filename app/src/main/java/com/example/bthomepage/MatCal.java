@@ -1,76 +1,83 @@
 package com.example.bthomepage;
-import android.content.Intent;
-import android.graphics.Color;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import com.github.sundeepk.compactcalendarview.CompactCalendarView;
-import com.github.sundeepk.compactcalendarview.domain.Event;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Locale;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import android.os.Bundle;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class MatCal extends AppCompatActivity {
 
-    private CompactCalendarView compactCalendarView;
-    private HashSet<Long> loginDates;
-    private TextView monthYearTextView;
+    private HashMap<String, ScoreData> dataMap = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calendar_new);
+        setContentView(R.layout.activity_calendar_new); // 请确保此处布局名称正确
 
-        compactCalendarView = findViewById(R.id.compactcalendar_view);
-        compactCalendarView.setFirstDayOfWeek(Calendar.MONDAY);
-        compactCalendarView.setUseThreeLetterAbbreviation(true);
-        loginDates = new HashSet<>();
+        fetchDataFromFirebase();
+    }
 
-        // Simulated list of login dates (replace with actual dates)
-        Calendar calendar = Calendar.getInstance();
-        loginDates.add(calendar.getTimeInMillis()); // Add today's date as an example
-        Event ev1 = new Event(Color.GREEN, calendar.getTimeInMillis(), "Logged in on this day");
-        compactCalendarView.addEvent(ev1);
+    private void fetchDataFromFirebase() {
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        FirebaseFirestore fstore = FirebaseFirestore.getInstance();
+        String userID = auth.getCurrentUser().getUid();
 
-        // Highlight a specific date (e.g., October 17, 2023)
-        Calendar highlightDate = Calendar.getInstance();
-        highlightDate.set(2023, Calendar.OCTOBER, 17);
-        Event highlightEvent = new Event(Color.BLUE, highlightDate.getTimeInMillis(), "Highlighted Date");
-        compactCalendarView.addEvent(highlightEvent);
-
-        // Initialize the TextView for the month and year
-        monthYearTextView = findViewById(R.id.monthYearTextView);
-
-        compactCalendarView.setListener(new CompactCalendarView.CompactCalendarViewListener() {
+        DocumentReference documentReference = fstore.collection("users").document(userID);
+        documentReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
-            public void onDayClick(Date dateClicked) {
-                if (loginDates.contains(dateClicked.getTime())) {
-                    // Date is logged in
-                    Toast.makeText(MatCal.this, "Logged-in Date: " + dateClicked, Toast.LENGTH_SHORT).show();
-                } else {
-                    // Date is not logged in
-                    Toast.makeText(MatCal.this, "Normal Date: " + dateClicked, Toast.LENGTH_SHORT).show();
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        for (Map.Entry<String, Object> entry : document.getData().entrySet()) {
+                            String key = entry.getKey();
+                            System.out.println(key);
+
+                            if (key.matches("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}")) {
+                                // The key matches the format, so add it to the set
+                                System.out.println("yes right format");
+                                //keysWithMatchingFormat.add(key);
+
+                                // Print the value
+                                Object value = entry.getValue();
+                                System.out.println("Key: " + key + ", Value: " + value);
+                            }
+
+
+                        }
+                    }
                 }
-            }
-
-            @Override
-            public void onMonthScroll(Date firstDayOfNewMonth) {
-                // Update the TextView with the current month and year
-                SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM yyyy", Locale.getDefault());
-                String monthYear = dateFormat.format(firstDayOfNewMonth);
-                monthYearTextView.setText(monthYear);
-
-                Toast.makeText(MatCal.this, "Month changed: " + monthYear, Toast.LENGTH_SHORT).show();
             }
         });
     }
 
-    public void sendBack1(View view) {
-        Intent intent = new Intent(this, HomePage.class);
-        startActivity(intent);
+    private void printDataMap() {
+        for (Map.Entry<String, ScoreData> entry : dataMap.entrySet()) {
+            String dateTime = entry.getKey();
+            ScoreData scoreData = entry.getValue();
+            System.out.println("Date: " + dateTime + ", Score: " + scoreData.getScore());
+        }
+    }
+
+    public class ScoreData {
+        int score;
+
+        public ScoreData(int score) {
+            this.score = score;
+        }
+
+        public int getScore() {
+            return score;
+        }
     }
 }

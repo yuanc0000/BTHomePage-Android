@@ -80,19 +80,6 @@ public class MatCal extends AppCompatActivity {
 
         compactCalendarView.setListener(new CompactCalendarView.CompactCalendarViewListener() {
 
-            /*
-            @Override
-
-            public void onDayClick(Date dateClicked) {
-                if (loginDates.contains(dateClicked.getTime())) {
-                    // Date is logged in
-                    Toast.makeText(MatCal.this, "Logged-in Date: " + dateClicked, Toast.LENGTH_SHORT).show();
-                } else {
-                    // Date is not logged in
-                    Toast.makeText(MatCal.this, "Normal Date: " + dateClicked, Toast.LENGTH_SHORT).show();
-                }
-            } */
-
             @Override
             public void onMonthScroll(Date firstDayOfNewMonth) {
                 // Update the TextView with the current month and year
@@ -102,29 +89,7 @@ public class MatCal extends AppCompatActivity {
 
                 Toast.makeText(MatCal.this, "Month changed: " + monthYear, Toast.LENGTH_SHORT).show();
             }
-            /*
-            @Override
-            public void onDayClick(Date dateClicked) {
-                Calendar clickedCalendar = Calendar.getInstance();
-                clickedCalendar.setTime(dateClicked);
-                LocalDate clickedDate = null;
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                    clickedDate = LocalDate.of(clickedCalendar.get(Calendar.YEAR), clickedCalendar.get(Calendar.MONTH) + 1, clickedCalendar.get(Calendar.DAY_OF_MONTH));
-                }
 
-                if (uniqueDates.contains(clickedDate)) {
-                    // Date is in the set of unique dates
-                    AlertDialog.Builder builder = new AlertDialog.Builder(MatCal.this);
-                    builder.setTitle("Details for " + clickedDate);
-                    builder.setMessage("Your detailed information or events for this date go here."); // Replace this with actual data or events
-                    builder.setPositiveButton("OK", null);
-                    builder.show();
-                } else {
-                    // Date is not in the set of unique dates
-                    Toast.makeText(MatCal.this, "Normal Date: " + dateClicked, Toast.LENGTH_SHORT).show();
-                }
-            }
-             */
             private String formatDataForDisplay(Map<String, Object> dataMap) {
                 StringBuilder formattedData = new StringBuilder();
 
@@ -146,6 +111,8 @@ public class MatCal extends AppCompatActivity {
                 String userID = FirebaseAuth.getInstance().getCurrentUser().getUid();
                 DocumentReference documentReference = fstore.collection("users").document(userID);
 
+                final boolean[] foundDataForDate = {false}; // Set an initial flag as false
+
                 documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                     @Override
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
@@ -165,9 +132,12 @@ public class MatCal extends AppCompatActivity {
                                     builder.setPositiveButton("OK", null);
                                     builder.show();
 
+                                    foundDataForDate[0] = true; // Set the flag as true because we found data
                                     break;
                                 }
-
+                            }
+                            if (!foundDataForDate[0]) {  // If data was not found, then display the Toast for normal date
+                                Toast.makeText(MatCal.this, "Normal Date: " + dateClicked, Toast.LENGTH_SHORT).show();
                             }
                         }
                     }
@@ -178,6 +148,7 @@ public class MatCal extends AppCompatActivity {
                     }
                 });
             }
+
 
 
         });

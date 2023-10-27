@@ -173,6 +173,7 @@
         android:layout_alignParentBottom="true"
         app:itemIconTint="@drawable/nav_view_colored"
         app:itemTextColor="@drawable/nav_view_colored"
+        app:itemIconSize="38dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

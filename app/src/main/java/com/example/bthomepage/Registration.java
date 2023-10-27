@@ -61,10 +61,9 @@ public class Registration extends AppCompatActivity {
         String userEmailString = userEmail.getText().toString();
 //password requirements for user to register
         if (userPasswordString.isEmpty() || userEmailString.isEmpty()){
-            Toast.makeText(this, "Please enter all details", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Registration.this, "Please enter all details", Toast.LENGTH_SHORT).show();
         }else if (userPasswordString.length() < 6){
             Toast.makeText(this, "Password too short", Toast.LENGTH_SHORT).show();
-
         }
         else {
             //if requirements are met then user is registered
@@ -104,8 +103,12 @@ public class Registration extends AppCompatActivity {
 
                 }
                 else{
-                    Toast.makeText(Registration.this, "Please enter all details", Toast.LENGTH_SHORT).show();
+
+                    Exception e = task.getException();
+                    String errorMessage = e != null ? e.getMessage() : "Unknown error";
+                    Toast.makeText(Registration.this, "Error: " + errorMessage, Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
     }

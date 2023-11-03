@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,6 +27,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -43,6 +45,8 @@ public class MatCal extends AppCompatActivity {
     private CompactCalendarView compactCalendarView;
     private HashSet<Long> loginDates;
     private TextView monthYearTextView;
+    BottomNavigationView bottomNavigationView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,30 +54,50 @@ public class MatCal extends AppCompatActivity {
         setContentView(R.layout.activity_calendar_new);
         fetchDataFromFirebase();
 
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.progressActivity);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener(){
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item){
+                switch (item.getItemId()) {
+                    case R.id.diagnosisActivity:
+                        Intent intent1 = new Intent(MatCal.this, DiagnosisActivity.class);
+                        startActivity(intent1);
+                        break;
+
+
+                    case R.id.exerciseActivity:
+                        Intent intent2 = new Intent(MatCal.this, LungsActivity.class);
+                        startActivity(intent2);
+                        break;
+
+                    case R.id.homeActivity:
+                        Intent intent3 = new Intent(MatCal.this, HomePage.class);
+                        startActivity(intent3);
+                        break;
+
+                    case R.id.progressActivity:
+                        break;
+
+                    case R.id.settingsActivity:
+                        Intent intent5 = new Intent(MatCal.this, SettingsActivity.class);
+                        startActivity(intent5);
+                        break;
+
+
+
+                }
+                return false;
+            }
+        });
+
+
+
         compactCalendarView = findViewById(R.id.compactcalendar_view);
         compactCalendarView.setFirstDayOfWeek(Calendar.MONDAY);
         compactCalendarView.setUseThreeLetterAbbreviation(true);
         loginDates = new HashSet<>();
-
-        //SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM yyyy", Locale.getDefault());
-        //String monthYear = dateFormat.format(firstDayOfNewMonth);
-        //monthYearTextView.setText(monthYear);
-
-
-        // Simulated list of login dates (replace with actual dates)
-        /*
-        Calendar calendar = Calendar.getInstance();
-        loginDates.add(calendar.getTimeInMillis()); // Add today's date as an example
-        Event ev1 = new Event(Color.GREEN, calendar.getTimeInMillis(), "Logged in on this day");
-        compactCalendarView.addEvent(ev1);*/
-
-        // Highlight a specific date (e.g., October 17, 2023)
-        /*
-        Calendar highlightDate = Calendar.getInstance();
-        highlightDate.set(2023, Calendar.OCTOBER, 17);
-        Event highlightEvent = new Event(Color.BLUE, highlightDate.getTimeInMillis(), "Highlighted Date");
-        compactCalendarView.addEvent(highlightEvent);
-        */
 
         // Initialize the TextView for the month and year
         monthYearTextView = findViewById(R.id.monthYearTextView);
@@ -200,15 +224,10 @@ public class MatCal extends AppCompatActivity {
             }
         });
     }
+    public void backToProgress(View view) {
+        Intent intent = new Intent(this, ProgressActivity.class);
+        startActivity(intent);
+    }
 
 
-
-    /*
-    private void printDataMap() {
-        for (Map.Entry<String, ScoreData> entry : dataMap.entrySet()) {
-            String dateTime = entry.getKey();
-            ScoreData scoreData = entry.getValue();
-            System.out.println("Date: " + dateTime + ", Score: " + scoreData.getScore());
-        }
-    }  */
 }

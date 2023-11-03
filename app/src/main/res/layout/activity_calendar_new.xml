@@ -51,7 +51,23 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/compactcalendar_view"
         android:layout_marginTop="40dp"
-        android:onClick="sendBack1"
-        android:text="Back" />
+        android:onClick="backToProgress"
+        android:text="Back to Progress" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@drawable/nav_view_colored"
+        app:itemTextColor="@drawable/nav_view_colored"
+        app:itemIconSize="38dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav" />
+
 
 </RelativeLayout>

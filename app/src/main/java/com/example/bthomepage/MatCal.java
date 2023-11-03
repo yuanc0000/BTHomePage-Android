@@ -43,10 +43,8 @@ public class MatCal extends AppCompatActivity {
 
     Set<LocalDate> uniqueDates = new HashSet<>();
     private CompactCalendarView compactCalendarView;
-    private HashSet<Long> loginDates;
     private TextView monthYearTextView;
     BottomNavigationView bottomNavigationView;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,10 +95,14 @@ public class MatCal extends AppCompatActivity {
         compactCalendarView = findViewById(R.id.compactcalendar_view);
         compactCalendarView.setFirstDayOfWeek(Calendar.MONDAY);
         compactCalendarView.setUseThreeLetterAbbreviation(true);
-        loginDates = new HashSet<>();
 
         // Initialize the TextView for the month and year
         monthYearTextView = findViewById(R.id.monthYearTextView);
+
+
+        // Deselect the current day
+        compactCalendarView.shouldSelectFirstDayOfMonthOnScroll(false);
+        //compactCalendarView.deselectCurrentDay(); // This will make sure no day is selected
 
         compactCalendarView.setListener(new CompactCalendarView.CompactCalendarViewListener() {
 

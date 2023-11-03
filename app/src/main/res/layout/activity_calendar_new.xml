@@ -38,11 +38,11 @@
         android:layout_marginTop="50dp"
         app:compactCalendarTargetHeight="250dp"
         app:compactCalendarTextSize="12sp"
-        app:compactCalendarBackgroundColor="#9FDBF7"
-        app:compactCalendarTextColor="#fff"
-        app:compactCalendarCurrentSelectedDayBackgroundColor="#5167E4"
-        app:compactCalendarCurrentDayBackgroundColor="#158AE6"
-        app:compactCalendarMultiEventIndicatorColor="#fff" />
+        app:compactCalendarBackgroundColor="#C5DEEA"
+        app:compactCalendarTextColor="#000000"
+        app:compactCalendarCurrentSelectedDayBackgroundColor="#8ebdd4"
+        app:compactCalendarCurrentDayBackgroundColor="#D32273A2"
+        app:compactCalendarMultiEventIndicatorColor="#195172" />
 
     <Button
         android:id="@+id/button15"

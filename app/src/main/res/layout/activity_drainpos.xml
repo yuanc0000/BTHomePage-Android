@@ -40,25 +40,24 @@
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="261dp"
-            android:layout_height="116dp"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:text="Postural drainage is about placing your body in different poses or positions to help mucus drain downward out of your lungs. The unique positions encourage different lobes, or sections, of your lung to drain out until you can cough up or spit out the phlegm."
-            android:textColor="#000000" />
+            android:text="Postural drainage means using different poses to help mucus drain downward out of your lungs. The unique positions encourage different lobes of the lung to drain out until you can cough up or spit out the phlegm."            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/textView5"
-            android:layout_width="295dp"
-            android:layout_height="105dp"
+            android:layout_width="320dp"
+            android:layout_height="80dp"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:text="It is often much more effective when you use it in combination with chest percussion and vibrations. The gravity along with the percussion and vibrations should effectively move the mucus out of your lungs, into your larger airways, and to your mouth where you can expel the excess sputum."
+            android:text="Combining with chest percussion and vibrations, you can effectively clear mucus from your lungs for easier expulsion."
             android:textColor="#000000" />
 
         <TextView
             android:id="@+id/textView7"
-            android:layout_width="263dp"
+            android:layout_width="320dp"
             android:layout_height="80dp"
             android:layout_marginTop="20dp"
 
@@ -69,7 +68,7 @@
 
         <TextView
             android:id="@+id/textView9"
-            android:layout_width="238dp"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:gravity="center"
@@ -80,7 +79,7 @@
         <ImageView
             android:id="@+id/imageView12"
             android:layout_width="match_parent"
-            android:layout_height="296dp"
+            android:layout_height="300dp"
             android:layout_marginTop="20dp"
             app:srcCompat="@drawable/generaldrainimg" />
 

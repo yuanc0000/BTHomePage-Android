@@ -8,105 +8,11 @@
     android:background="#FFFFFF"
     tools:context=".LungsActivity">
 
-    <Button
-        android:id="@+id/PLbtn"
-        android:layout_width="264dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="35dp"
-        android:gravity="left"
-        android:onClick="sendMessagePLBreathing"
-        android:text="Pursed Lip Breathing"
-        app:backgroundTint="#C5DEEA"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.19"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/autodrainagebtn" />
-
-    <Button
-        android:id="@+id/ACBTbtn"
-        android:layout_width="257dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="35dp"
-        android:gravity="left"
-        android:onClick="sendMessageACBT"
-        android:text="Active Cycle Breathing Technique"
-        app:backgroundTint="#C5DEEA"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.175"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/diaphragmaticbtn" />
-
-    <Button
-        android:id="@+id/autodrainagebtn"
-        android:layout_width="263dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="35dp"
-        android:gravity="left"
-        android:onClick="sendMessageAutoDrainage"
-        android:text="Autogenic Drainage"
-        app:backgroundTint="#C5DEEA"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.189"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ACBTbtn" />
-
-    <Button
-        android:id="@+id/diaphragmaticbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:gravity="left"
-        android:onClick="sendMessageDiaphram"
-        android:text="Diaphragmatic Breathing"
-        app:backgroundTint="#C5DEEA"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.177"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PVtn" />
-
-    <!--    <include-->
-<!--        layout="@layout/item_bottom_navigation"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="bottom"-->
-<!--        android:background="#6498B5"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->
-
-    <Button
-        android:id="@+id/PVtn"
-        android:layout_width="250dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="35dp"
-        android:gravity="left"
-        android:onClick="sendMessagePV"
-        android:text="Percussions and Vibrations"
-        app:backgroundTint="#C5DEEA"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.167"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/drainposbtn" />
-
-    <Button
-        android:id="@+id/drainposbtn"
-        android:layout_width="252dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="28dp"
-        android:gravity="left"
-        android:onClick="sendMessagedrainpos"
-        android:text="Position for Drainage"
-        app:backgroundTint="#C5DEEA"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.201"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/exerciseLabel" />
-
     <TextView
         android:id="@+id/exerciseLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="60dp"
         android:text="Breathing Exercises"
         android:textColor="#000000"
         android:textSize="30sp"
@@ -114,6 +20,103 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/PLbtn"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="44dp"
+        android:elevation="4dp"
+        android:onClick="sendMessagePLBreathing"
+        android:text="Pursed Lip Breathing"
+        android:textAllCaps="false"
+        app:backgroundTint="#C5DEEA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/exerciseLabel"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.85" />
+
+    <Button
+        android:id="@+id/ACBTbtn"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:elevation="4dp"
+        android:onClick="sendMessageACBT"
+        android:text="Active Cycle Breathing Technique"
+        android:textAllCaps="false"
+        app:backgroundTint="#C5DEEA"
+        app:layout_constraintEnd_toEndOf="@id/PLbtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/PLbtn"
+        app:layout_constraintTop_toBottomOf="@id/PLbtn" />
+
+
+    <Button
+        android:id="@+id/autodrainagebtn"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:elevation="4dp"
+        android:onClick="sendMessageAutoDrainage"
+        android:text="Autogenic Drainage"
+        android:textAllCaps="false"
+        app:backgroundTint="#C5DEEA"
+        app:layout_constraintEnd_toEndOf="@id/ACBTbtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/ACBTbtn"
+        app:layout_constraintTop_toBottomOf="@id/ACBTbtn" />
+
+    <Button
+        android:id="@+id/diaphragmaticbtn"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:elevation="4dp"
+        android:onClick="sendMessageDiaphram"
+        android:text="Diaphragmatic Breathing"
+        android:textAllCaps="false"
+        app:backgroundTint="#C5DEEA"
+        app:layout_constraintEnd_toEndOf="@id/autodrainagebtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/autodrainagebtn"
+        app:layout_constraintTop_toBottomOf="@id/autodrainagebtn" />
+
+
+
+    <Button
+        android:id="@+id/PVtn"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:elevation="4dp"
+        android:onClick="sendMessagePV"
+        android:text="Percussions and Vibrations"
+        android:textAllCaps="false"
+        app:backgroundTint="#C5DEEA"
+        app:layout_constraintEnd_toEndOf="@id/diaphragmaticbtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/diaphragmaticbtn"
+        app:layout_constraintTop_toBottomOf="@id/diaphragmaticbtn" />
+
+
+    <Button
+        android:id="@+id/drainposbtn"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:elevation="4dp"
+        android:onClick="sendMessagedrainpos"
+        android:text="Position for Drainage"
+        android:textAllCaps="false"
+        app:backgroundTint="#C5DEEA"
+        app:layout_constraintEnd_toEndOf="@id/PVtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/PVtn"
+        app:layout_constraintTop_toBottomOf="@id/PVtn" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
@@ -127,8 +130,5 @@
         app:menu="@menu/bottom_nav"
         app:itemIconTint="@drawable/nav_view_colored"
         app:itemTextColor="@drawable/nav_view_colored"/>
-
-
-<!--    android:state_checked="true"-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

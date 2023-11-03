@@ -214,9 +214,6 @@ public class MatCal extends AppCompatActivity {
                                 }
                                 Event highlightEvent = new Event(Color.BLUE, highlightDate.getTimeInMillis(), "Highlighted Date");
                                 compactCalendarView.addEvent(highlightEvent);
-
-                                // Print the value
-                                System.out.println("date: " + date);
                             }
 
 

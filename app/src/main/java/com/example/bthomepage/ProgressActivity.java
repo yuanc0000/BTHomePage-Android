@@ -220,13 +220,38 @@ public class ProgressActivity extends AppCompatActivity implements BottomNavigat
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void unused) {
+                            minteger=0;
+                            minteger1=0;
+                            minteger2=0;
+                            minteger3=0;
+                            minteger4=0;
+                            minteger5=0;
+                            // Add this inside your onSuccess method after the Toast
+                            TextView textView = findViewById(R.id.integer_number);
+                            TextView textView1 = findViewById(R.id.integer_number1);
+                            TextView textView2 = findViewById(R.id.integer_number2);
+                            TextView textView3 = findViewById(R.id.integer_number3);
+                            TextView textView4 = findViewById(R.id.integer_number4);
+                            TextView textView5 = findViewById(R.id.integer_number5);
+
+                            textView.setText("0");
+                            textView1.setText("0");
+                            textView2.setText("0");
+                            textView3.setText("0");
+                            textView4.setText("0");
+                            textView5.setText("0");
+
                             Log.d(TAG, "onSuccess: saved progress data for " + currentDateTime);
+                            Toast.makeText(getApplicationContext(), "Progress saved for " + currentDateTime, Toast.LENGTH_SHORT).show();
+
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NotNull Exception e) {
                             Log.d(TAG, "Failed to save progress data: " + e.toString());
+                            Toast.makeText(getApplicationContext(), "Failed to save progress data: " + e.toString(), Toast.LENGTH_SHORT).show();
+
                         }
                     });
         }

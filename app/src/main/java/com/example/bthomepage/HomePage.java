@@ -36,9 +36,6 @@ public class HomePage extends AppCompatActivity implements BottomNavigationView.
         setContentView(R.layout.activity_home_page);
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.homeActivity);
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        }
 
 //bottom navigation view implemented
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener(){

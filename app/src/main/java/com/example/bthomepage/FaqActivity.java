@@ -150,14 +150,14 @@ public class FaqActivity extends AppCompatActivity {
     }
 
     private void show4() {
-        f3.setVisibility(View.VISIBLE);
-        up3.setVisibility(View.VISIBLE);
+        f4.setVisibility(View.VISIBLE);
+        up4.setVisibility(View.VISIBLE);
         findViewById(R.id.down4).setVisibility(View.GONE);
     }
 
     private void hide4() {
-        f3.setVisibility(View.GONE);
-        up3.setVisibility(View.GONE);
+        f4.setVisibility(View.GONE);
+        up4.setVisibility(View.GONE);
         findViewById(R.id.down4).setVisibility(View.VISIBLE);
     }
 

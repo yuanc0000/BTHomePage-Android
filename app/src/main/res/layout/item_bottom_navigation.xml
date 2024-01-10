@@ -11,7 +11,7 @@
         android:id="@+id/bottomNav_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="?android:attr/windowBackground"
+        android:background="#C5DEEA"
         app:itemIconTint="@color/black"
         app:itemTextColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"

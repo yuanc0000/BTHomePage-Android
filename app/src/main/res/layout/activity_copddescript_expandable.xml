@@ -48,7 +48,7 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:text="Description"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:textSize="20sp" />
 
             <ImageView
@@ -103,7 +103,7 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:text="Causes"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:textSize="20sp" />
 
             <ImageView
@@ -157,7 +157,7 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:text="Symptoms"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:textSize="20sp" />
 
             <ImageView
@@ -206,12 +206,13 @@
             android:padding="8dp">
 
             <!-- Question TextView -->
+
             <TextView
                 android:id="@+id/q4"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:text="Tests"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:textSize="20sp" />
 
             <ImageView
@@ -266,7 +267,7 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:text="Recommended Exercises"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:textSize="20sp" />
 
             <ImageView
@@ -302,9 +303,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:layout_below="@+id/faq5_expand"
-        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
         android:onClick="BackToDiagnoses"
         android:text="Finished" />
+
 
 
 

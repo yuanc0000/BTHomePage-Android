@@ -24,15 +24,18 @@ xmlns:tools="http://schemas.android.com/tools">
         android:textColor="#000000"
         android:textSize="35sp"/>
 
-
     <TextView
         android:id="@+id/plDescripttv"
-        android:layout_width="244dp"
-        android:layout_height="88dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
         android:gravity="center"
         android:text="Pursed Lip Breathing helps create a backflow of positive pressure to help keep the airways open so the CO2 isn’t being trapped within the lungs."
-        android:textColor="#000000"/>
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
     <TextView
         android:id="@+id/plDirectionstv"
         android:layout_width="wrap_content"
@@ -72,7 +75,7 @@ xmlns:tools="http://schemas.android.com/tools">
         android:id="@+id/imageView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         app:srcCompat="@drawable/plimagefinal" />
     <TextView
         android:id="@+id/textView23"
@@ -82,7 +85,7 @@ xmlns:tools="http://schemas.android.com/tools">
         android:gravity="center"
         android:textColor="#000000"
 
-        android:text="You finished! Return to Exercises to complete more trainings and don't forget to log your progress!" />
+        android:text="You finished! Return to Exercises to complete more training and don't forget to log your progress!" />
 
 
 

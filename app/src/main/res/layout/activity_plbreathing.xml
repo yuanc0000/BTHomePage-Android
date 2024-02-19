@@ -19,75 +19,95 @@ xmlns:tools="http://schemas.android.com/tools">
         android:id="@+id/plTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:text="Pursed Lip Breathing"
         android:textColor="#000000"
-        android:textSize="35sp"/>
+        android:textSize="35sp" />
 
     <TextView
         android:id="@+id/plDescripttv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
         android:gravity="center"
         android:text="Pursed Lip Breathing helps create a backflow of positive pressure to help keep the airways open so the CO2 isn’t being trapped within the lungs."
         android:textColor="#000000"
-        android:textSize="15sp" />
+        android:textSize="17sp" />
 
     <TextView
         android:id="@+id/plDirectionstv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Directions"
+        android:gravity="center"
+        android:textSize = "19dp"
+        android:text="Directions:"
+        android:textStyle="bold"
         android:textColor="#000000"/>
 
     <TextView
         android:id="@+id/inhaletv"
-        android:layout_width="264dp"
+        android:layout_width="320dp"
         android:layout_height="23dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="1. Inhale: “Smell the roses” for 2 counts."
-        android:textColor="#000000"/>
+        android:textColor="#000000"
+        android:textSize = "17dp"/>
 
     <TextView
         android:id="@+id/textView20"
-        android:layout_width="268dp"
-        android:layout_height="91dp"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
         android:textColor="#000000"
-
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
-        android:text="1. Sit upright in a comfortable seat and lift your chin slightly." />
+        android:textSize = "17dp"
+        android:text="2. Sit upright in a comfortable seat and lift your chin slightly." />
 
     <TextView
         android:id="@+id/textView21"
-        android:layout_width="268dp"
-        android:layout_height="91dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="320dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="10dp"
         android:textColor="#000000"
-
+        android:textSize = "17dp"
         android:gravity="center"
-        android:text="2. Take a slow, deep breath in, using your diaphragm (belly breaths). Hold your breath for 2-3 seconds, then force the air out through your mouth in three rapid huffs, taking care to keep your throat open." />
+        android:text="3. Take a slow, deep breath in, using your diaphragm (belly breaths). Hold your breath for 2-3 seconds, then force the air out through your mouth in three rapid huffs, taking care to keep your throat open." />
+
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        app:srcCompat="@drawable/plimagefinal" />
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/plb1" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        app:srcCompat="@drawable/plb2" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        app:srcCompat="@drawable/plb3" />
+
     <TextView
         android:id="@+id/textView23"
-        android:layout_width="268dp"
-        android:layout_height="91dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
         android:layout_marginTop="15dp"
         android:gravity="center"
+        android:text="You finished! Return to Exercises to complete more training and don't forget to log your progress!"
         android:textColor="#000000"
-
-        android:text="You finished! Return to Exercises to complete more training and don't forget to log your progress!" />
-
-
+        android:textSize="17dp"/>
 
     <Button
         android:id="@+id/button3"
@@ -102,8 +122,8 @@ xmlns:tools="http://schemas.android.com/tools">
         android:id="@+id/button7"
         android:layout_width="158dp"
         android:layout_height="56dp"
-
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:onClick="sendMessagesExercises"
         android:text="Return to Exercises" />
 

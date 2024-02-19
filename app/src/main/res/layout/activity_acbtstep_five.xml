@@ -25,7 +25,7 @@
             android:layout_height="110dp"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:text="Step 3: Relaxed Controlled Breathing"
+            android:text="Step 5: Relaxed Controlled Breathing"
             android:textColor="#000000"
             android:textSize="35sp" />
 
@@ -94,10 +94,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:onClick="sendMessagestepfourACBT"
+            android:layout_marginBottom="20dp"
+            android:onClick="sendMessagestepsixACBTACBT"
             android:text="Next Step"
             android:textColor="#000000"
-            app:backgroundTint="#C5DEEA"
-            android:layout_marginBottom="20dp"/>
+            app:backgroundTint="#C5DEEA" />
     </LinearLayout>
 </ScrollView>

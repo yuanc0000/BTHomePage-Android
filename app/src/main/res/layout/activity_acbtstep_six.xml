@@ -12,77 +12,88 @@
         android:background="#FFFFFF"
         android:gravity="center"
         android:orientation="vertical"
-        tools:context=".AutoDrainageStepOne">
+        tools:context=".ACBTStepThree">
 
         <TextView
             android:id="@+id/textView16"
             android:layout_width="350dp"
-            android:layout_height="50dp"
+            android:layout_height="110dp"
             android:layout_marginTop="50dp"
             android:gravity="center"
-            android:text="Step 3: Expel Mucus"
+            android:text="Step 6: Controlled Huff Cough"
             android:textColor="#000000"
-            android:textSize="35sp" />
+            android:textSize="35sp"/>
 
 
         <TextView
             android:id="@+id/textView17"
             android:layout_width="350dp"
-            android:layout_height="70dp"
+            android:layout_height="150dp"
             android:layout_marginTop="20dp"
-            android:textSize="17dp"
             android:gravity="center"
-            android:text="In this phase, you should feel the phlegm moving in your chest, giving you the urge to cough."
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="17dp"
+            android:text="Huffing involves taking a breath in, holding it, and actively exhaling. Breathing in and holding it enables air to get behind the mucus and separates it from the lung wall so it can be coughed out. This technique also keeps the throat open to effectively move the mucus out of the lungs." />
 
         <TextView
             android:id="@+id/textView18"
             android:layout_width="350dp"
-            android:layout_height="50dp"
+            android:layout_height="90dp"
             android:layout_marginTop="10dp"
-            android:textSize="17dp"
             android:gravity="center"
             android:textColor="#000000"
-            android:text="A.Take a large, deep breath in and hold it for three seconds."/>
+            android:textSize="17dp"
+            android:text="Huffing is not as forceful as a cough, but it can work better and be less tiring. Huffing is like exhaling onto a mirror or window to steam it up." />
+
         <TextView
             android:id="@+id/textView19"
             android:layout_width="350dp"
-            android:layout_height="30dp"
+            android:layout_height="80dp"
             android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="#000000"
             android:textSize="17dp"
-            android:gravity="center"
-            android:text="B. Breathe out normally."
-            android:textColor="#000000" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="match_parent"
-            android:layout_height="279dp"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:src="@drawable/generalautoimg" />
+            android:text="Successful huff coughing usually requires about 3-5 repetitions with at least 5-10 normal breaths in between." />
 
         <TextView
             android:id="@+id/textView20"
             android:layout_width="350dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="20dp"
-            android:textSize="15dp"
+            android:layout_height="60dp"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            android:layout_marginTop="40dp"
             android:gravity="center"
-            android:text="*Continue taking long, deep inhales, holding your breath for a few moments, and then exhaling normally until you feel mucus in your upper chest and throat. Use huffing exhales to force up the phlegm and cough it out."
-            android:textColor="#000000" />
+            android:text="A. Sit upright in a comfortable seat and lift your chin slightly." />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="350dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            android:gravity="center"
+            android:text="B. Take a slow, deep breath in, using your diaphragm (belly breaths). Hold your breath for 2-3 seconds, then force the air out through your mouth in three rapid huffs, taking care to keep your throat open." />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            android:gravity="center"
+            android:text="C. Repeat the technique, but take a slightly smaller breath this time. You can repeat the huff coughing technique as needed, alternating between small and large breaths." />
 
         <TextView
             android:id="@+id/textView23"
             android:layout_width="350dp"
             android:layout_height="80dp"
-            android:layout_marginTop="20dp"
-            android:textSize="17dp"
+            android:layout_marginTop="40dp"
             android:gravity="center"
             android:textColor="#000000"
-
+            android:textSize="17dp"
             android:text="You finished! Return to Exercises to complete more trainings and don't forget to log your progress!" />
-
 
         <Button
             android:id="@+id/button1"
@@ -99,11 +110,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:onClick="sendMessagesExercises"
             android:text="Return to Exercises"
             android:textColor="#000000"
-            app:backgroundTint="#C5DEEA"
-            android:layout_marginBottom="20dp"/>
+            app:backgroundTint="#C5DEEA"/>
+
 
     </LinearLayout>
 </ScrollView>

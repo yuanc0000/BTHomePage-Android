@@ -98,7 +98,7 @@
         android:layout_marginTop="28dp"
         android:elevation="4dp"
         android:onClick="sendMessagePV"
-        android:text="Percussion and Vibrations"
+        android:text="Percussion and Vibration"
         android:textAllCaps="false"
         android:textSize="15sp"
         app:backgroundTint="#C5DEEA"

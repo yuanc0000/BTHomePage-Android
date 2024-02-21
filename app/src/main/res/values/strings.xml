@@ -12,12 +12,12 @@
     <string name="messageWithLink"><a href="https://bronchiectasis.com.au/resources/videos/the-active-cycle-of-breathing-technique">Follow along with this video</a></string>
     <string name="messageWithLinkAutogenic"><a href="https://bronchiectasis.com.au/physiotherapy/techniques/autogenic-drainage">Follow along with this video</a></string>
     <string name="messageWithPV"><a href="https://bronchiectasis.com.au/resources/videos/manual-techniques">Follow along with this video</a></string>
-    <string name="messageWithOscillator"><a href="https://www.cff.org/Life-With-CF/Treatments-and-Therapies/Airway-Clearance/High-frequency-Chest-Wall-Oscillation">High Frequency Chest Wall Oscillator</a></string>
-    <string name="messageWithOscillatorDescript"><a href="https://www.cff.org/high-frequency-chest-wall-oscillation-vest">More Information on High Frequency Chest Wall Oscillator</a></string>
+    <string name="messageWithOscillator">Read more about high frequency oscillation vest <a href="https://www.cff.org/Life-With-CF/Treatments-and-Therapies/Airway-Clearance/High-frequency-Chest-Wall-Oscillation">here</a></string>
+    <string name="messageWithOscillatorDescript">Read more about vibration <a href="https://www.cff.org/high-frequency-chest-wall-oscillation-vest">here</a></string>
 
-    <string name="messageWithdrainLink"><a href="https://www.healthlinkbc.ca/health-topics/za1357">More Information on postural drainage</a></string>
+    <string name="messageWithdrainLink">Read more about postural drainage <a href="https://www.healthlinkbc.ca/health-topics/za1357">here</a></string>
 
-    <string name="messageWithBellyBreathing"><a href="https://www.healthlinkbc.ca/health-topics/aa141579#aa141579-sec">Information on Belly Breathing</a></string>
+    <string name="messageWithBellyBreathing">Read more about belly breathing <a href="https://www.healthlinkbc.ca/health-topics/aa141579#aa141579-sec">here</a></string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>

@@ -56,10 +56,10 @@
 
     <TextView
         android:id="@+id/tvUserReg"
+        android:layout_width="54dp"
+        android:layout_height="18dp"
         android:onClick="sendMessagenewReg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New User? Sign Up!"
+        android:text="Sign up"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

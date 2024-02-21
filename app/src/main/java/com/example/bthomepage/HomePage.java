@@ -96,7 +96,7 @@ public class HomePage extends AppCompatActivity implements BottomNavigationView.
             } });
 //click on image leads to information on diet and lifestyle
         ImageView imgClickDiet;
-        imgClickDiet = (ImageView)findViewById(R.id.imgDiet);
+        imgClickDiet = (ImageView)findViewById(R.id.img_recommendation);
         Intent intentdiet = new Intent(this, DietActivity.class);
         imgClickDiet.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v)

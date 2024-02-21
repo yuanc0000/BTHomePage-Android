@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/staticFAQ"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="FAQ"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+
+    <RelativeLayout
+        android:id="@+id/faq1_expand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/staticFAQ"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="20dp">
+
+        <!-- Parent layout with blue rectangular padding (using direct color value) -->
+
+        <!-- Answer TextView -->
+
+        <LinearLayout
+            android:id="@+id/questionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#C5DEEA"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <!-- Question TextView -->
+            <TextView
+                android:id="@+id/q1"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Who is this app for?"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/arrow1"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:src="@drawable/expand_white_1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="2dp"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/f1"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/questionLayout"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="This app is for patients in recovery with breathing ailments."
+            android:textColor="#5A5A5A"
+            android:textSize="17dp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/faq2_expand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/faq1_expand"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:id="@+id/questionLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#C5DEEA"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <!-- Question TextView -->
+            <TextView
+                android:id="@+id/q2"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="What is this app for?"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/arrow2"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/expand_white_1" />
+        </LinearLayout>
+
+        <!-- Answer TextView -->
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/f2"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/questionLayout2"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="The app is for patients breathing rehabilitation. It will provide you with a step by step tutorial of how to properly complete your daily breathing. Additionally, it will have information on all of the exercises, a progress tracker, and more so that you have all the tools and resources to succeed on your journey of health."
+            android:textColor="#5A5A5A"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/faq3_expand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/faq2_expand"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:id="@+id/questionLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#C5DEEA"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <!-- Question TextView -->
+            <TextView
+                android:id="@+id/q3"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="How frequently should the app be used?"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/arrow3"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/expand_white_1" />
+        </LinearLayout>
+
+        <!-- Answer TextView -->
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/f3"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/questionLayout3"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="The frequency of this app is set by your doctor and you based on your physical therapy schedule."
+            android:textColor="#5A5A5A"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/faq4_expand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/faq3_expand"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:id="@+id/questionLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#C5DEEA"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <!-- Question TextView -->
+
+            <TextView
+                android:id="@+id/q4"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="What if I do not understand an exercise?"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/arrow4"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/expand_white_1" />
+
+        </LinearLayout>
+
+        <!-- Answer TextView -->
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/f4"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/questionLayout4"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="The exercise should be followed through a video after their description is shown. If confusion continues to arise, contact your physical therapist and they will provide more answers on breathing technique"
+            android:textColor="#5A5A5A"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/faq5_expand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/faq4_expand"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"/>
+
+
+    <Button
+        android:id="@+id/button15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/faq4_expand"
+        android:onClick="sendBack1"
+        android:text="Back" />
+
+
+
+
+</RelativeLayout>

@@ -9,16 +9,17 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
+        android:background="#C5DEEA"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         app:itemIconSize="38dp"
+        app:itemIconTint="@drawable/nav_view_colored"
+        app:itemTextColor="@drawable/nav_view_colored"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav"
-        app:itemIconTint="@drawable/nav_view_colored"
-        app:itemTextColor="@drawable/nav_view_colored"/>
+        app:menu="@menu/bottom_nav" />
 
     <TextView
         android:id="@+id/textView32"

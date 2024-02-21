@@ -171,13 +171,17 @@
         android:layout_height="60dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginBottom="0dp"
+        android:background="#C5DEEA"
+        app:itemIconSize="38dp"
         app:itemIconTint="@drawable/nav_view_colored"
         app:itemTextColor="@drawable/nav_view_colored"
-        app:itemIconSize="38dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav" />
+
 
 </android.widget.RelativeLayout>

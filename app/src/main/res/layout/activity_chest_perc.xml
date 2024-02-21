@@ -16,9 +16,9 @@ xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="199dp"
-        android:layout_height="195dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="370dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
         android:gravity="center"
         android:text="Chest Percussion"
         android:textColor="#000000"
@@ -26,19 +26,21 @@ xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="260dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="350dp"
+        android:layout_height="140dp"
         android:gravity="center"
+        android:textSize = "17sp"
+        android:layout_marginTop="20dp"
         android:text="This is a type of chest physical therapy that essentially involves tapping or clapping on your chest with your hand. This physically loosens and breaks down mucus that is stuck in your airways, making it easier to cough up out of your lungs."
         android:textColor="#000000" />
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="271dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="350dp"
+        android:layout_height="120dp"
         android:gravity="center"
+        android:textSize = "17sp"
+        android:layout_marginTop="20dp"
         android:text="1. Sit while leaning back and use a cupped hand to deliver very firm, but gentle claps to the upper-left and upper-right part of your chest (in the space between your collarbone and nipple)."
         android:textColor="#020202" />
 
@@ -52,20 +54,22 @@ xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="271dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
         android:gravity="center"
-        android:text="2. Tap the left side of your chest for 2-3 minutes"
+        android:textSize = "17sp"
+        android:layout_marginTop="10dp"
+        android:text="2. Tap the left side of your chest for 2-3 minutes."
         android:textColor="#020202"
         />
 
     <TextView
         android:id="@+id/textView14"
-        android:layout_width="271dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
         android:gravity="center"
+        android:textSize = "17sp"
+        android:layout_marginTop="10dp"
         android:text="3. Repeat the percussions on the right side for another 2-3 minutes."
         android:textColor="#020202"
         />
@@ -73,20 +77,21 @@ xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
         android:id="@+id/textView15"
-        android:layout_width="271dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
         android:gravity="center"
-        android:text="*You should feel the mucus loosening in your chest as you perform the percussions and feel the urge to cough immediately after. Allow yourself to cough up as much mucus as you can in-between percussions until you've cleared all the excess phlegm from your chest."
+        android:textSize = "17sp"
+        android:layout_marginTop="20dp"
+        android:text="You should feel the mucus loosening in your chest as you perform the percussions and feel the urge to cough immediately after. Allow yourself to cough up as much mucus as you can in-between percussions until you've cleared all the excess phlegm from your chest."
         android:textColor="#020202"
-        android:textSize="10sp"
         />
     <TextView
         android:id="@+id/textView23"
-        android:layout_width="268dp"
-        android:layout_height="91dp"
-        android:layout_marginTop="15dp"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
         android:gravity="center"
+        android:textSize = "17sp"
+        android:layout_marginTop="20dp"
         android:textColor="#000000"
         android:text="You finished! Return to Exercises to complete more trainings and don't forget to log your progress!" />
 
@@ -106,6 +111,7 @@ xmlns:tools="http://schemas.android.com/tools">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:onClick="sendMessagesPerc"
         android:text="Finish"
         android:textColor="#000000"

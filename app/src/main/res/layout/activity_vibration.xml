@@ -16,9 +16,9 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="203dp"
-            android:layout_height="174dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="370dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="50dp"
             android:gravity="center"
             android:text="Vibration"
             android:textColor="#000000"
@@ -26,38 +26,42 @@
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="260dp"
-            android:layout_height="54dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="350dp"
+            android:layout_height="130dp"
             android:gravity="center"
-            android:text="Vibration is another form of chest physiotherapy that is often done in combination with chest and back percussions. You can perform vibration therapy on the same areas that you do percussions on: both sides of the upper chest and back."
+            android:textSize = "17sp"
+            android:layout_marginTop="20dp"
+            android:text="Vibration is another form of chest physical therapy that is often done in combination with chest and back percussions. You can perform vibration therapy on the same areas that you do percussions on: both sides of the upper chest and back."
             android:textColor="#000000" />
 
         <TextView
             android:id="@+id/textView11"
-            android:layout_width="265dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
             android:gravity="center"
-            android:text="Manually performed by a caregiver or respiratory therapist"
+            android:textSize = "17sp"
+            android:layout_marginTop="10dp"
+            android:text="Manually performed by a caregiver or respiratory therapist."
             android:textColor="#020202"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView13"
-            android:layout_width="271dp"
-            android:layout_height="69dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
             android:gravity="center"
+            android:textSize = "17sp"
+            android:layout_marginTop="10dp"
             android:text="1. Place both hands, flat and palm-side down, on the target area."
             android:textColor="#020202"
             />
 
         <TextView
             android:id="@+id/textView14"
-            android:layout_width="271dp"
-            android:layout_height="69dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:textSize = "17sp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="2. Using gentle pressure with the heels of both hands, tense your hands and wrists and shake them in a vibration-like motion."
             android:textColor="#020202"
@@ -65,39 +69,42 @@
 
         <TextView
             android:id="@+id/textView17"
-            android:layout_width="271dp"
-            android:layout_height="69dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:textSize = "17sp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="3. Patient should exhale slowly as you perform the vibration."
             android:textColor="#020202" />
 
         <TextView
             android:id="@+id/textView16"
-            android:layout_width="271dp"
-            android:layout_height="69dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
             android:gravity="center"
-            android:text="3. Tap for 2-3 minutes in that spot, then repeat again above your right shoulder blade."
+            android:textSize = "17sp"
+            android:layout_marginTop="10dp"
+            android:text="4. Tap for 2-3 minutes in that spot, then repeat again above your right shoulder blade."
             android:textColor="#020202"
             />
 
 
         <ImageView
             android:id="@+id/imageView11"
-            android:layout_width="283dp"
-            android:layout_height="195dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
             app:srcCompat="@drawable/vibrations" />
 
         <TextView
             android:id="@+id/textView15"
-            android:layout_width="271dp"
-            android:layout_height="69dp"
-            android:layout_marginTop="10dp"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
             android:gravity="center"
+            android:textSize = "17sp"
+            android:layout_marginTop="10dp"
             android:text="*There is special equipment available that uses air pressure to deliver high frequency vibrations to the chest and back and allows patients to do it on their own."
             android:textColor="#020202"
-            android:textSize="10sp"
             />
 
         <TextView
@@ -117,10 +124,11 @@
 
         <TextView
             android:id="@+id/textView23"
-            android:layout_width="268dp"
-            android:layout_height="91dp"
-            android:layout_marginTop="15dp"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
             android:gravity="center"
+            android:textSize = "17sp"
+            android:layout_marginTop="10dp"
             android:textColor="#000000"
 
             android:text="You finished! Return to Exercises to complete more trainings and don't forget to log your progress!" />
@@ -141,6 +149,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:onClick="sendMessagesPerc"
             android:text="Finish"
             android:textColor="#000000"

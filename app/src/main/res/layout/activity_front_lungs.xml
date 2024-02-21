@@ -16,9 +16,9 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="203dp"
-            android:layout_height="174dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="370dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="50dp"
             android:gravity="center"
             android:text="Drain Front of Lungs "
             android:textColor="#000000"
@@ -26,65 +26,68 @@
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="260dp"
-            android:layout_height="54dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
             android:gravity="center"
+            android:textSize = "17sp"
             android:text="Lie on your back. Make sure that your chest is lower than your hips. Put two pillows under your hips. Use a small pillow under your head. Keep your arms at your sides."
             android:textColor="#000000" />
 
         <TextView
             android:id="@+id/textView11"
-            android:layout_width="265dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="350dp"
+            android:layout_height="30dp"
             android:gravity="center"
+            android:textSize = "17sp"
             android:text="Follow these instructions for breathing:"
-            android:textColor="#020202" />
+            android:textColor="#020202"
+            android:layout_marginTop="20dp"/>
 
         <TextView
             android:id="@+id/textView14"
-            android:layout_width="265dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="5dp"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
             android:gravity="center"
+            android:textSize = "17sp"
             android:text="1. With one hand on your belly and the other on your chest, breathe in. "
-            android:textColor="#020202" />
+            android:textColor="#020202"
+            android:layout_marginTop="10dp"/>
 
         <TextView
             android:id="@+id/textView12"
-            android:layout_width="265dp"
-            android:layout_height="76dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="350dp"
+            android:layout_height="90dp"
             android:gravity="center"
+            android:textSize = "17sp"
             android:text="2. Push your belly out as far as possible. You should be able to feel the hand on your belly move out, while the hand on your chest should not move."
-            android:textColor="#020202" />
+            android:textColor="#020202"
+            android:layout_marginTop="10dp"/>
 
         <TextView
             android:id="@+id/textView13"
-            android:layout_width="265dp"
-            android:layout_height="110dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="350dp"
+            android:layout_height="120dp"
             android:gravity="center"
+            android:textSize = "17sp"
             android:text="3. When you breathe out, you should be able to feel the hand on your belly move in. This is called belly breathing or diaphragmatic breathing. You will use it in the other drainage positions too."
             android:textColor="#020202" />
 
 
         <ImageView
             android:id="@+id/imageView14"
-            android:layout_width="wrap_content"
-            android:layout_height="131dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="350dp"
+            android:layout_height="160dp"
+            android:gravity="center"
             app:srcCompat="@drawable/bellybreathing" />
 
         <TextView
             android:id="@+id/textView23"
-            android:layout_width="268dp"
-            android:layout_height="91dp"
-            android:layout_marginTop="15dp"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
             android:gravity="center"
+            android:textSize="17sp"
             android:textColor="#000000"
-
+            android:layout_marginTop="10dp"
             android:text="You finished! Return to Exercises to complete more trainings and don't forget to log your progress!" />
 
 
@@ -103,6 +106,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:onClick="sendMessagesBackDrainPos"
             android:text="Finish"
             android:textColor="#000000"

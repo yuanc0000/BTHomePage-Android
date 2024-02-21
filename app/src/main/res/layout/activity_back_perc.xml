@@ -16,9 +16,9 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="199dp"
-            android:layout_height="195dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="370dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="50dp"
             android:gravity="center"
             android:text="Back Percussion"
             android:textColor="#000000"
@@ -26,39 +26,43 @@
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="260dp"
-            android:layout_height="54dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="350dp"
+            android:layout_height="130dp"
             android:gravity="center"
+            android:textSize = "17sp"
+            android:layout_marginTop="20dp"
             android:text="This is a type of chest physical therapy that essentially involves tapping or clapping the back. This physically loosens and breaks down mucus that is stuck in your airways, making it easier to cough up out of your lungs."
             android:textColor="#000000" />
 
         <TextView
             android:id="@+id/textView11"
-            android:layout_width="265dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="7dp"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
             android:gravity="center"
+            android:textSize = "17sp"
+            android:layout_marginTop="10dp"
             android:text="You need to have a caregiver or respiratory therapist there to help out."
             android:textColor="#020202"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView13"
-            android:layout_width="271dp"
-            android:layout_height="69dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
             android:gravity="center"
+            android:textSize = "17sp"
+            android:layout_marginTop="10dp"
             android:text="1. Start in a leaning-forward position, by holding a pillow to your chest and bending forward at the waist."
             android:textColor="#020202"
             />
 
         <TextView
             android:id="@+id/textView14"
-            android:layout_width="271dp"
-            android:layout_height="69dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
             android:gravity="center"
+            android:textSize = "17sp"
+            android:layout_marginTop="10dp"
             android:text="2. Have your therapist or caregiver tap gently but firmly on your back with a cupped hand, in the space right above your shoulder blade."
             android:textColor="#020202"
             />
@@ -72,32 +76,34 @@
 
         <TextView
             android:id="@+id/textView16"
-            android:layout_width="271dp"
-            android:layout_height="69dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
             android:gravity="center"
-            android:text="3. Tap for 2-3 minutes in that spot, then repeat again above your right shoulder blade."
+            android:textSize = "17sp"
+            android:layout_marginTop="10dp"
+            android:text="3. Tap for 2-3 minutes in that spot, then repeat again above your opposite shoulder blade."
             android:textColor="#020202"
             />
 
 
         <TextView
             android:id="@+id/textView15"
-            android:layout_width="271dp"
-            android:layout_height="69dp"
-            android:layout_marginTop="10dp"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
             android:gravity="center"
+            android:textSize = "17sp"
+            android:layout_marginTop="10dp"
             android:text="*The mucus in your chest should loosen, allowing you to cough and expel it from your lungs."
             android:textColor="#020202"
-            android:textSize="10sp"
             />
 
         <TextView
             android:id="@+id/textView23"
-            android:layout_width="268dp"
-            android:layout_height="91dp"
-            android:layout_marginTop="15dp"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
             android:gravity="center"
+            android:textSize = "17sp"
+            android:layout_marginTop="20dp"
             android:textColor="#000000"
 
             android:text="You finished! Return to Exercises to complete more trainings and don't forget to log your progress!" />
@@ -118,6 +124,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:onClick="sendMessagesPerc"
             android:text="Finish"
             android:textColor="#000000"

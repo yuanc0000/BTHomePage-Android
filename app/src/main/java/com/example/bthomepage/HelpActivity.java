@@ -213,6 +213,11 @@ public class HelpActivity extends AppCompatActivity{
         }
     }
 
+    public void sendBack(View view) {
+        Intent intent = new Intent(this, HomePage.class);
+        startActivity(intent);
+    }
+
 
 //    @Override
 //    public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {

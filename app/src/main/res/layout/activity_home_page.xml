@@ -37,8 +37,8 @@
         android:src="@drawable/lungs" />
 
     <ImageView
-        android:id="@+id/img_recommendation"
-        android:layout_width="67dp"
+        android:id="@+id/imgRecommendation"
+        android:layout_width="80dp"
         android:layout_height="96dp"
         android:layout_below="@+id/tvDiagnosis"
         android:layout_alignParentStart="true"
@@ -46,8 +46,8 @@
         android:layout_centerVertical="true"
         android:layout_marginStart="73dp"
         android:layout_marginLeft="73dp"
-        android:layout_marginTop="79dp"
-        android:src="@drawable/dietexercise" />
+        android:layout_marginTop="80dp"
+        android:src="@drawable/img_recommendation" />
 
     <ImageView
         android:id="@+id/imgProgress"

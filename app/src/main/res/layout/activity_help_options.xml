@@ -26,7 +26,7 @@
         android:layout_width="252dp"
         android:layout_height="49dp"
         android:layout_marginTop="28dp"
-        android:gravity="center"
+        android:gravity="left"
         android:onClick="sendMessageFAQ"
         android:text="FAQ"
         app:backgroundTint="#C5DEEA"
@@ -40,14 +40,8 @@
         android:layout_width="252dp"
         android:layout_height="49dp"
         android:layout_marginTop="28dp"
-<<<<<<< HEAD
-        android:gravity="center"
-        android:onClick="sendMessageEmail"
-        android:text="Email Doctor"
-=======
         android:gravity="left"
         android:text="Share my progress"
->>>>>>> bd61b839c768dff4ba6b0d858c7eebff491be21d
         app:backgroundTint="#C5DEEA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.201"

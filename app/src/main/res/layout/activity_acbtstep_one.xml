@@ -82,12 +82,12 @@ xmlns:tools="http://schemas.android.com/tools">
         android:textSize = "17sp"
  />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/imageButton"
         android:layout_width="308dp"
         android:layout_height="275dp"
         android:layout_marginTop="40dp"
-        app:srcCompat="@drawable/acbtgeneralimg" />
+        app:srcCompat="@drawable/acbt1" />
 
     <Button
         android:id="@+id/button2"

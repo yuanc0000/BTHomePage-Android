@@ -132,6 +132,8 @@ public class MatCal extends AppCompatActivity {
             public void onDayClick(Date dateClicked) {
                 SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
                 String clickedDateString = dateFormat.format(dateClicked); // Convert the clicked date to "yyyy-MM-dd" format
+                SimpleDateFormat dateFormat1 = new SimpleDateFormat("EEE MMM dd yyyy", Locale.getDefault());
+                String clickedDateString1 = dateFormat1.format(dateClicked);
 
                 FirebaseFirestore fstore = FirebaseFirestore.getInstance();
                 String userID = FirebaseAuth.getInstance().getCurrentUser().getUid();
@@ -151,9 +153,10 @@ public class MatCal extends AppCompatActivity {
                                     Map<String, Object> dataForTheDate = (Map<String, Object>) entry.getValue();
 
                                     String formattedMessage = formatDataForDisplay(dataForTheDate);
+                                    System.out.println(formattedMessage);
 
                                     AlertDialog.Builder builder = new AlertDialog.Builder(MatCal.this);
-                                    builder.setTitle("Details for " + clickedDateString);
+                                    builder.setTitle(clickedDateString1);
                                     builder.setMessage(Html.fromHtml(formattedMessage));  // 使用Html.fromHtml来解析HTML标签
                                     builder.setPositiveButton("OK", null);
                                     builder.show();

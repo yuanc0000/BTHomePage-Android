@@ -202,12 +202,12 @@ public class ProgressActivity extends AppCompatActivity implements BottomNavigat
 
             // Create a map to hold the scores
             Map<String, Object> scoresData = new HashMap<>();
-            scoresData.put("Pursed Lip Breathing Rep Count", minteger);
-            scoresData.put("Position for Drainage Rep Count", minteger1);
-            scoresData.put("Diaphragmatic Breathing Rep Count", minteger2);
-            scoresData.put("ACBT Rep Count", minteger3);
-            scoresData.put("Autogenic Breathing Rep Count", minteger4);
-            scoresData.put("Percussions and Vibrations Rep Count", minteger5);
+            scoresData.put("Pursed Lip Breathing ", minteger);
+            scoresData.put("Position for Drainage ", minteger1);
+            scoresData.put("Diaphragmatic Breathing ", minteger2);
+            scoresData.put("ACBT ", minteger3);
+            scoresData.put("Autogenic Breathing ", minteger4);
+            scoresData.put("Percussions and Vibrations ", minteger5);
 
             // Create a map to hold the scores under the current date
             Map<String, Object> dateData = new HashMap<>();

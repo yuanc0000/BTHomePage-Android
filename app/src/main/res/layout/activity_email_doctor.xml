@@ -24,9 +24,19 @@
         android:id="@+id/send_to_doctor_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Send to Doctor"
+        android:text="Share my progress"
         android:layout_below="@id/privacy_text"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/button15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/send_to_doctor_button"
+        android:onClick="sendBack1"
+        android:text="Back" />
 
 </RelativeLayout>

@@ -16,9 +16,9 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="203dp"
-            android:layout_height="174dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="50dp"
             android:gravity="center"
             android:text="Drain Back of Lungs "
             android:textColor="#000000"
@@ -26,22 +26,21 @@
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="260dp"
-            android:layout_height="54dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
             android:gravity="center"
-            android:text="Lie on your stomach.
-Place two or three pillows under your hips. Use a small pillow under your head.
-Place your arms by your head.
-"
+            android:textSize = "17sp"
+            android:layout_marginTop="20dp"
+            android:text="Lie on your stomach. Place two or three pillows under your hips. Use a small pillow under your head. Place your arms by your head."
             android:textColor="#000000" />
 
         <TextView
             android:id="@+id/textView11"
-            android:layout_width="265dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="350dp"
+            android:layout_height="30dp"
             android:gravity="center"
+            android:textSize = "17sp"
+            android:layout_marginTop="10dp"
             android:text="Use belly breathing."
             android:textColor="#020202" />
         <TextView
@@ -58,16 +57,17 @@ Place your arms by your head.
 
         <ImageView
             android:id="@+id/imageView14"
-            android:layout_width="wrap_content"
-            android:layout_height="131dp"
+            android:layout_width="350dp"
+            android:layout_height="160dp"
             android:layout_marginTop="20dp"
             app:srcCompat="@drawable/bellybreathing" />
 
         <TextView
             android:id="@+id/textView23"
-            android:layout_width="268dp"
-            android:layout_height="91dp"
-            android:layout_marginTop="15dp"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:textSize = "17sp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:textColor="#000000"
 

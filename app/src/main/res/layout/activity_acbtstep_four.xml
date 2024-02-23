@@ -12,12 +12,13 @@
         android:layout_height="100dp"
         android:layout_marginTop="50dp"
         android:gravity="center"
-        android:text="Step 2: Chest Expansion Exercise"
+        android:text="Step 4: Chest Expansion Exercise"
         android:textColor="#000000"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="20dp"/>
 
     <TextView
         android:id="@+id/textView23"
@@ -76,11 +77,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="660dp"
-        android:onClick="sendMessagestepthreeACBT"
+        android:onClick="sendMessagestepfiveACBTACBT"
         android:text="Next Step"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginBottom="20dp"/>
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

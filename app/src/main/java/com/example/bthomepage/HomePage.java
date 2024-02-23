@@ -38,42 +38,34 @@ public class HomePage extends AppCompatActivity implements BottomNavigationView.
         bottomNavigationView.setSelectedItemId(R.id.homeActivity);
 
 //bottom navigation view implemented
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener(){
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
 
             @Override
             public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.diagnosisActivity:
-//                        item.setIcon(R.drawable.ic_launcher_diagnosis);
                         Intent intent1 = new Intent(HomePage.this, DiagnosisActivity.class);
                         startActivity(intent1);
-                        break;
-
+                        return true;
 
                     case R.id.exerciseActivity:
                         Intent intent2 = new Intent(HomePage.this, LungsActivity.class);
                         startActivity(intent2);
-                        break;
+                        return true;
 
                     case R.id.homeActivity:
-                        break;
+                        // No need to handle, just return true
+                        return true;
 
                     case R.id.progressActivity:
                         Intent intent4 = new Intent(HomePage.this, ProgressActivity.class);
                         startActivity(intent4);
-                        break;
-
-
-//                    case R.id.settingsActivity:
-//                        Intent intent5 = new Intent(HomePage.this, SettingsActivity.class);
-//                        startActivity(intent5);
-//                        break;
-
-
+                        return true;
                 }
                 return false;
             }
         });
+
 //click on image leads to diagnosis options
         ImageView imgClickDiagnosis;
         imgClickDiagnosis = (ImageView)findViewById(R.id.imgDiagnosis);
@@ -96,7 +88,7 @@ public class HomePage extends AppCompatActivity implements BottomNavigationView.
             } });
 //click on image leads to information on diet and lifestyle
         ImageView imgClickDiet;
-        imgClickDiet = (ImageView)findViewById(R.id.imgDiet);
+        imgClickDiet = (ImageView)findViewById(R.id.img_recommendation);
         Intent intentdiet = new Intent(this, DietActivity.class);
         imgClickDiet.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v)

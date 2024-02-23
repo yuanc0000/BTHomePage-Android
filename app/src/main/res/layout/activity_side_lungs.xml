@@ -16,9 +16,9 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="203dp"
-            android:layout_height="174dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="50dp"
             android:gravity="center"
             android:text="Drain Side of Lungs "
             android:textColor="#000000"
@@ -26,27 +26,30 @@
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="260dp"
-            android:layout_height="54dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
             android:gravity="center"
+            android:textSize = "17sp"
+            android:layout_marginTop="20dp"
             android:text="Do this step as you lie on one side. Then turn over, and do it on the other side."
             android:textColor="#000000" />
 
         <TextView
             android:id="@+id/textView11"
-            android:layout_width="265dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:textSize = "17sp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="1. Place two or three pillows under your hips. Use a small pillow under your head. Make sure your chest is lower than your hips. "
             android:textColor="#020202" />
 
         <TextView
             android:id="@+id/textView14"
-            android:layout_width="265dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="5dp"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:textSize = "17sp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="2. Use belly breathing. After 5 or 10 minutes, switch sides. "
             android:textColor="#020202" />
@@ -67,16 +70,17 @@
 
         <ImageView
             android:id="@+id/imageView14"
-            android:layout_width="wrap_content"
-            android:layout_height="131dp"
+            android:layout_width="350dp"
+            android:layout_height="160dp"
             android:layout_marginTop="20dp"
             app:srcCompat="@drawable/bellybreathing" />
 
         <TextView
             android:id="@+id/textView23"
-            android:layout_width="268dp"
-            android:layout_height="91dp"
-            android:layout_marginTop="15dp"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:textSize = "17sp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:textColor="#000000"
 
@@ -98,6 +102,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:onClick="sendMessagesBackDrainPos"
             android:text="Finish"
             android:textColor="#000000"

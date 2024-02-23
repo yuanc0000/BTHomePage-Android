@@ -17,9 +17,9 @@ xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
         android:id="@+id/textView55"
-        android:layout_width="346dp"
+        android:layout_width="350dp"
         android:layout_height="93dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="50dp"
         android:gravity="center"
         android:text="Diaphragmatic Breathing"
         android:textColor="#000000"
@@ -28,44 +28,63 @@ xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
         android:id="@+id/textView56"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="1. Sit comfortably and relax your shoulders"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:textSize = "17sp"
+        android:layout_marginTop="20dp"
+        android:text="1. Sit comfortably and relax your shoulders."
         android:textColor="#000000" />
 
     <TextView
         android:id="@+id/textView57"
-        android:layout_width="283dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
         android:gravity="center"
-        android:text="2. Put one hand on your abdomen and inhale slowly through your nose (abdomen should be pushed out)"
+        android:textSize = "17sp"
+        android:layout_marginTop="10dp"
+        android:text="2. Put one hand on your abdomen and inhale slowly through your nose (abdomen should be pushed out)."
         android:textColor="#000000" />
 
     <TextView
         android:id="@+id/textView58"
-        android:layout_width="295dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="350dp"
+        android:layout_height="75dp"
         android:gravity="center"
-        android:text="3. Push in your abdomen muslces and breathe out using pursed-lip technique (abdomen should go down)"
+        android:textSize = "17sp"
+        android:layout_marginTop="10dp"
+        android:text="3. Push in your abdomen muslces and breathe out using pursed-lip technique (abdomen should go down)."
         android:textColor="#000000" />
+
 
     <ImageView
         android:id="@+id/imageView17"
         android:layout_width="338dp"
         android:layout_height="173dp"
         android:layout_marginTop="28dp"
-        app:srcCompat="@drawable/finaldiaph" />
+        app:srcCompat="@drawable/diaph1" />
 
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="338dp"
+        android:layout_height="173dp"
+        android:layout_marginTop="28dp"
+        app:srcCompat="@drawable/diaph2" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="338dp"
+        android:layout_height="173dp"
+        android:layout_marginTop="28dp"
+        app:srcCompat="@drawable/diaph3" />
 
     <TextView
         android:id="@+id/textView23"
-        android:layout_width="268dp"
-        android:layout_height="91dp"
-        android:layout_marginTop="15dp"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
         android:gravity="center"
+        android:textSize = "17sp"
+        android:layout_marginTop="10dp"
         android:textColor="#000000"
 
         android:text="You finished! Return to Exercises to complete more trainings and don't forget to log your progress!" />
@@ -86,6 +105,7 @@ xmlns:tools="http://schemas.android.com/tools">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:onClick="sendMessagesExercises"
         android:text="Return to Exercises"
         android:textColor="#000000"

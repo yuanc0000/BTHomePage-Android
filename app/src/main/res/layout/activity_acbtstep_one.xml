@@ -21,8 +21,8 @@ xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="199dp"
-        android:layout_height="195dp"
+        android:layout_width="350dp"
+        android:layout_height="110dp"
         android:layout_marginTop="20dp"
         android:gravity="center"
         android:text="Step 1: Relaxed Controlled Breathing"
@@ -31,53 +31,63 @@ xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="260dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="Breathing slowly and steadily can help relax your airways and make it easier to expel mucus."
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:textSize = "17sp"/>
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="271dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="1. Sit up in a comfortable position and relax your chest, shoulders, and abdominal muscles."
-        android:textColor="#020202" />
+        android:textColor="#020202"
+        android:textSize = "17sp"/>
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="271dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="350dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="2. Breathe in through your nose and out through your mouth with very little effort, using normal, gentle breathing with the lower chest. You should feel your stomach rise and fall as you breathe, and it can help to lay one of your hands on your stomach to feel your abdomen expand as you take each breath."
         android:textColor="#020202"
-/>
+        android:textSize = "17sp"/>
 
     <TextView
         android:id="@+id/textView14"
-        android:layout_width="271dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="370dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="3. Repeat breathing control for six breaths before moving to chest expansion exercises. "
         android:textColor="#020202"
+        android:textSize = "17sp"
         />
 
 
     <TextView
         android:id="@+id/textView15"
-        android:layout_width="271dp"
+        android:layout_width="350dp"
         android:layout_height="69dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:text="*Try not to wheeze or breathe heavily before attempting to cough up mucus with this method."
         android:textColor="#020202"
-        android:textSize="10sp"
+        android:textSize = "17sp"
  />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="308dp"
+        android:layout_height="275dp"
+        android:layout_marginTop="40dp"
+        app:srcCompat="@drawable/acbtgeneralimg" />
 
     <Button
         android:id="@+id/button2"
@@ -87,6 +97,7 @@ xmlns:tools="http://schemas.android.com/tools">
         android:onClick="sendMessagesteptwoACBT"
         android:text="Next Step"
         android:textColor="#000000"
-        app:backgroundTint="#C5DEEA" />
+        app:backgroundTint="#C5DEEA"
+        android:layout_marginBottom="20dp"/>
 </LinearLayout>
 </ScrollView>

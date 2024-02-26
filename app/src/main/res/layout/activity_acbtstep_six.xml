@@ -12,7 +12,7 @@
         android:background="#FFFFFF"
         android:gravity="center"
         android:orientation="vertical"
-        tools:context=".ACBTStepThree">
+        tools:context=".ACBTStepSix">
 
         <TextView
             android:id="@+id/textView16"

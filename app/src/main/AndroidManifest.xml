@@ -36,6 +36,9 @@
         <activity android:name=".AutoDrainageStepThree" />
         <activity android:name=".AutoDrainageStepTwo" />
         <activity android:name=".AutoDrainageStepOne" />
+        <activity android:name=".ACBTStepSix" />
+        <activity android:name=".ACBTStepFive" />
+        <activity android:name=".ACBTStepFour" />
         <activity android:name=".ACBTStepThree" />
         <activity android:name=".ACBTStepTwo" />
         <activity android:name=".ACBTStepOne" />

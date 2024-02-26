@@ -69,8 +69,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="70dp"
-        android:layout_marginLeft="70dp"
+        android:layout_marginStart="77dp"
+        android:layout_marginLeft="77dp"
         android:layout_marginBottom="161dp"
         android:src="@drawable/calendar" />
 
@@ -123,9 +123,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="65dp"
-        android:layout_marginLeft="65dp"
-        android:layout_marginBottom="115dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginBottom="117dp"
         android:text="Track Progress" />
 
     <TextView
@@ -147,7 +147,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="63dp"
+        android:layout_marginStart="60dp"
         android:layout_marginLeft="63dp"
         android:layout_marginTop="0dp"
         android:layout_marginBottom="330dp"

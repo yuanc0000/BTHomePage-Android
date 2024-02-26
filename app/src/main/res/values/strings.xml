@@ -9,9 +9,9 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-    <string name="messageWithLink"><a href="https://bronchiectasis.com.au/resources/videos/the-active-cycle-of-breathing-technique">Follow along with this video</a></string>
-    <string name="messageWithLinkAutogenic"><a href="https://bronchiectasis.com.au/physiotherapy/techniques/autogenic-drainage">Follow along with this video</a></string>
-    <string name="messageWithPV"><a href="https://bronchiectasis.com.au/resources/videos/manual-techniques">Follow along with this video</a></string>
+    <string name="messageWithLink">Follow along with <a href="https://bronchiectasis.com.au/resources/videos/the-active-cycle-of-breathing-technique">this video</a></string>
+    <string name="messageWithLinkAutogenic">Follow along with <a href="https://bronchiectasis.com.au/physiotherapy/techniques/autogenic-drainage">this video</a></string>
+    <string name="messageWithPV">Follow along with <a href="https://bronchiectasis.com.au/resources/videos/manual-techniques">this video</a></string>
     <string name="messageWithOscillator">Read more about high frequency oscillation vest <a href="https://www.cff.org/Life-With-CF/Treatments-and-Therapies/Airway-Clearance/High-frequency-Chest-Wall-Oscillation">here</a></string>
     <string name="messageWithOscillatorDescript">Read more about vibration <a href="https://www.cff.org/high-frequency-chest-wall-oscillation-vest">here</a></string>
 

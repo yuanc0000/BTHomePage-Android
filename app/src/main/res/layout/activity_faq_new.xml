@@ -235,7 +235,7 @@
             android:layout_below="@+id/questionLayout4"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
-            android:text="The exercise should be followed through a video after their description is shown. If confusion continues to arise, contact your physical therapist and they will provide more answers on breathing technique"
+            android:text="The exercise should be followed through a video after their description is shown. If confusion continues to arise, contact your physical therapist and they will provide more answers on breathing technique."
             android:textColor="#5A5A5A"
             android:textSize="17sp" />
     </RelativeLayout>

@@ -117,12 +117,14 @@ public class MatCal extends AppCompatActivity {
             }
 
             private String formatDataForDisplay(Map<String, Object> dataMap) {
+
+
                 StringBuilder formattedData = new StringBuilder();
 
                 for (Map.Entry<String, Object> entry : dataMap.entrySet()) {
                     String key = entry.getKey();
                     Object value = entry.getValue();
-                    String formattedEntry = "<b>" + key + ":</b> " + value.toString() + "<br>";  // 使用HTML标签来进行加粗并换行
+                    String formattedEntry = key + ":   " + value.toString() + "<br>";
                     formattedData.append(formattedEntry);
                 }
 
@@ -157,7 +159,7 @@ public class MatCal extends AppCompatActivity {
 
                                     AlertDialog.Builder builder = new AlertDialog.Builder(MatCal.this);
                                     builder.setTitle(clickedDateString1);
-                                    builder.setMessage(Html.fromHtml(formattedMessage));  // 使用Html.fromHtml来解析HTML标签
+                                    builder.setMessage(Html.fromHtml(formattedMessage));
                                     builder.setPositiveButton("OK", null);
                                     builder.show();
 

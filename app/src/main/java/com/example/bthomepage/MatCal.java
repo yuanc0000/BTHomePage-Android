@@ -46,11 +46,21 @@ public class MatCal extends AppCompatActivity {
     private TextView monthYearTextView;
     BottomNavigationView bottomNavigationView;
 
+    private void updateMonthYearDisplay(Date date) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM yyyy", Locale.getDefault());
+        String monthYear = dateFormat.format(date);
+        monthYearTextView.setText(monthYear);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar_new);
         fetchDataFromFirebase();
+
+        monthYearTextView = findViewById(R.id.monthYearTextView);
+// 显示当前月份
+        updateMonthYearDisplay(new Date());
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.progressActivity);
@@ -109,11 +119,15 @@ public class MatCal extends AppCompatActivity {
             @Override
             public void onMonthScroll(Date firstDayOfNewMonth) {
                 // Update the TextView with the current month and year
-                SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM yyyy", Locale.getDefault());
-                String monthYear = dateFormat.format(firstDayOfNewMonth);
-                monthYearTextView.setText(monthYear);
+//                SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM yyyy", Locale.getDefault());
+//                String monthYear = dateFormat.format(firstDayOfNewMonth);
+//                monthYearTextView.setText(monthYear);
 
-                Toast.makeText(MatCal.this, "Month changed: " + monthYear, Toast.LENGTH_SHORT).show();
+                updateMonthYearDisplay(firstDayOfNewMonth);
+
+                Toast.makeText(MatCal.this, "Month changed: " + new SimpleDateFormat("MMMM yyyy", Locale.getDefault()).format(firstDayOfNewMonth), Toast.LENGTH_SHORT).show();
+
+                //Toast.makeText(MatCal.this, "Month changed: " + monthYear, Toast.LENGTH_SHORT).show();
             }
 
             private String formatDataForDisplay(Map<String, Object> dataMap) {

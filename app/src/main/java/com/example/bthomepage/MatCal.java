@@ -1,4 +1,5 @@
 package com.example.bthomepage;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -6,6 +7,7 @@ import android.os.Bundle;
 import android.text.Html;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +24,7 @@ import java.util.Locale;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -171,11 +174,29 @@ public class MatCal extends AppCompatActivity {
                                     String formattedMessage = formatDataForDisplay(dataForTheDate);
                                     System.out.println(formattedMessage);
 
+//                                    AlertDialog.Builder builder = new AlertDialog.Builder(MatCal.this);
+//                                    builder.setTitle(clickedDateString1);
+//                                    builder.setMessage(Html.fromHtml(formattedMessage));
+//                                    builder.setPositiveButton("OK", null);
+//                                    builder.show();
                                     AlertDialog.Builder builder = new AlertDialog.Builder(MatCal.this);
                                     builder.setTitle(clickedDateString1);
                                     builder.setMessage(Html.fromHtml(formattedMessage));
                                     builder.setPositiveButton("OK", null);
-                                    builder.show();
+
+                                    AlertDialog dialog = builder.create();
+                                    dialog.setOnShowListener(new DialogInterface.OnShowListener() {
+                                        @Override
+                                        public void onShow(DialogInterface dialogInterface) {
+                                            Button positiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
+                                            positiveButton.setTextColor(Color.BLACK);
+                                            //positiveButton.setBackgroundColor(ContextCompat.getColor(MatCal.this, R.color.colorPrimary));
+                                            positiveButton.setBackgroundColor(Color.parseColor("#C5DEEA"));
+                                            // positiveButton.setBackground(ContextCompat.getDrawable(getContext(), R.drawable.your_custom_drawable));
+                                        }
+                                    });
+                                    dialog.show();
+
 
                                     foundDataForDate[0] = true; // Set the flag as true because we found data
                                     break;

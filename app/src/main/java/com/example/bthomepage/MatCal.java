@@ -220,6 +220,11 @@ public class MatCal extends AppCompatActivity {
         });
     }
 
+    public void goToCurrentMonth(View view) {
+        compactCalendarView.setCurrentDate(new Date());
+        updateMonthYearDisplay(new Date());
+    }
+
     private void fetchDataFromFirebase() {
         FirebaseAuth auth = FirebaseAuth.getInstance();
         FirebaseFirestore fstore = FirebaseFirestore.getInstance();

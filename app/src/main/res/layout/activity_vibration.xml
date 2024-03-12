@@ -41,7 +41,7 @@
             android:gravity="center"
             android:textSize = "17sp"
             android:layout_marginTop="10dp"
-            android:text="Manually performed by a caregiver or respiratory therapist."
+            android:text="You need to have a caregiver or respiratory therapist there to help out."
             android:textColor="#020202"
             android:textStyle="bold" />
 
@@ -99,7 +99,7 @@
         <TextView
             android:id="@+id/textView15"
             android:layout_width="350dp"
-            android:layout_height="60dp"
+            android:layout_height="100dp"
             android:gravity="center"
             android:textSize = "17sp"
             android:layout_marginTop="10dp"
@@ -125,7 +125,7 @@
         <TextView
             android:id="@+id/textView23"
             android:layout_width="350dp"
-            android:layout_height="60dp"
+            android:layout_height="65dp"
             android:gravity="center"
             android:textSize = "17sp"
             android:layout_marginTop="10dp"

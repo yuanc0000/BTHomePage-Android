@@ -89,13 +89,12 @@
         <TextView
             android:id="@+id/textView15"
             android:layout_width="350dp"
-            android:layout_height="60dp"
-            android:gravity="center"
-            android:textSize = "17sp"
+            android:layout_height="65dp"
             android:layout_marginTop="10dp"
+            android:gravity="center"
             android:text="*The mucus in your chest should loosen, allowing you to cough and expel it from your lungs."
             android:textColor="#020202"
-            />
+            android:textSize="17sp" />
 
         <TextView
             android:id="@+id/textView23"

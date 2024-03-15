@@ -100,7 +100,7 @@
             android:layout_width="308dp"
             android:layout_height="275dp"
             android:layout_marginTop="40dp"
-            app:srcCompat="@drawable/acbt6" />
+            app:srcCompat="@drawable/ACBT_step6" />
 
         <Button
             android:id="@+id/button1"

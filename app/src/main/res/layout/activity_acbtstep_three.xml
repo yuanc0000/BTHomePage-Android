@@ -87,7 +87,7 @@
             android:layout_width="308dp"
             android:layout_height="275dp"
             android:layout_marginTop="40dp"
-            app:srcCompat="@drawable/acbt3" />
+            app:srcCompat="@drawable/ACBT_step3" />
 
         <Button
             android:id="@+id/button2"

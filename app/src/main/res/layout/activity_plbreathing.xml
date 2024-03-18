@@ -94,7 +94,7 @@ xmlns:tools="http://schemas.android.com/tools">
         android:id="@+id/imageView9"
         android:layout_width="150dp"
         android:layout_height="170dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="10dp"
         app:srcCompat="@drawable/plb3" />
 
     <TextView

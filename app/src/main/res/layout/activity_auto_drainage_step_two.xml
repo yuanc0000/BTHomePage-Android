@@ -70,7 +70,7 @@
             android:onClick="sendMessagesAutoStepThree"
             android:text="Next Step"
             android:textColor="#000000"
-            app:backgroundTint="#C5DEEA" />
+            app:backgroundTint="#0099FF" />
 
 
     </LinearLayout>

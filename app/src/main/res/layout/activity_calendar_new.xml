@@ -38,7 +38,7 @@
         android:layout_marginTop="50dp"
         app:compactCalendarTargetHeight="250dp"
         app:compactCalendarTextSize="12sp"
-        app:compactCalendarBackgroundColor="#C5DEEA"
+        app:compactCalendarBackgroundColor="#0099FF"
         app:compactCalendarTextColor="#000000"
         app:compactCalendarCurrentSelectedDayBackgroundColor="#8ebdd4"
         app:compactCalendarCurrentDayBackgroundColor="#D32273A2"
@@ -66,7 +66,7 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
-        android:background="#C5DEEA"
+        android:background="#0099FF"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentStart="true"

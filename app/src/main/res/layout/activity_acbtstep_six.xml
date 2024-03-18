@@ -100,7 +100,7 @@
             android:layout_width="308dp"
             android:layout_height="275dp"
             android:layout_marginTop="40dp"
-            app:srcCompat="@drawable/ACBT_step6" />
+            app:srcCompat="@drawable/acbt_step6" />
 
         <Button
             android:id="@+id/button1"
@@ -110,7 +110,7 @@
             android:onClick="sendMessagesProgress"
             android:text="Record Progress"
             android:textColor="#000000"
-            app:backgroundTint="#C5DEEA" />
+            app:backgroundTint="#0099FF" />
 
         <Button
             android:id="@+id/button2"
@@ -121,7 +121,7 @@
             android:onClick="sendMessagesExercises"
             android:text="Return to Exercises"
             android:textColor="#000000"
-            app:backgroundTint="#C5DEEA"/>
+            app:backgroundTint="#0099FF"/>
 
 
     </LinearLayout>

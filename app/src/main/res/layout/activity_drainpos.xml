@@ -127,7 +127,7 @@
             android:text="Next"
             android:textColor="#000000"
             android:onClick="sendMessagesOptionsDrainPos"
-            app:backgroundTint="#C5DEEA"
+            app:backgroundTint="#0099FF"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"/>
 

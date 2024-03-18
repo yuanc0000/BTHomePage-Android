@@ -142,7 +142,7 @@
             android:onClick="sendMessagesProgress"
             android:text="Record Progress"
             android:textColor="#000000"
-            app:backgroundTint="#C5DEEA" />
+            app:backgroundTint="#0099FF" />
 
         <Button
             android:id="@+id/button2"
@@ -153,7 +153,7 @@
             android:onClick="sendMessagesPerc"
             android:text="Finish"
             android:textColor="#000000"
-            app:backgroundTint="#C5DEEA" />
+            app:backgroundTint="#0099FF" />
 
     </LinearLayout>
 </ScrollView>

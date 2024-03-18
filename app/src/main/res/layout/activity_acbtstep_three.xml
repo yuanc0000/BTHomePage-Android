@@ -87,7 +87,7 @@
             android:layout_width="308dp"
             android:layout_height="275dp"
             android:layout_marginTop="40dp"
-            app:srcCompat="@drawable/ACBT_step3" />
+            app:srcCompat="@drawable/acbt_step3" />
 
         <Button
             android:id="@+id/button2"
@@ -97,7 +97,7 @@
             android:onClick="sendMessagestepfourACBT"
             android:text="Next Step"
             android:textColor="#000000"
-            app:backgroundTint="#C5DEEA"
+            app:backgroundTint="#0099FF"
             android:layout_marginBottom="20dp"/>
     </LinearLayout>
 </ScrollView>

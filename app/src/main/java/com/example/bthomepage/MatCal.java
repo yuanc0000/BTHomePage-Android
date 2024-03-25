@@ -203,7 +203,7 @@ public class MatCal extends AppCompatActivity {
                                 }
                             }
                             if (!foundDataForDate[0]) {  // If data was not found, then display the Toast for normal date
-                                Toast.makeText(MatCal.this, "Normal Date: " + dateClicked, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MatCal.this, "No Data: " + dateClicked, Toast.LENGTH_SHORT).show();
                             }
                         }
                     }

@@ -136,12 +136,24 @@ public class MatCal extends AppCompatActivity {
             private String formatDataForDisplay(Map<String, Object> dataMap) {
 
 
-                StringBuilder formattedData = new StringBuilder();
+                //StringBuilder formattedData = new StringBuilder();
 
+//                for (Map.Entry<String, Object> entry : dataMap.entrySet()) {
+//                    String key = entry.getKey();
+//                    Object value = entry.getValue();
+//                    String formattedEntry = key + ":   " + value.toString() + "<br>";
+//                    formattedData.append(formattedEntry);
+//                }
+                int maxKeyLength = 0;
+                for (String key : dataMap.keySet()) {
+                    maxKeyLength = Math.max(maxKeyLength, key.length());
+                }
+
+                StringBuilder formattedData = new StringBuilder();
                 for (Map.Entry<String, Object> entry : dataMap.entrySet()) {
                     String key = entry.getKey();
                     Object value = entry.getValue();
-                    String formattedEntry = key + ":   " + value.toString() + "<br>";
+                    String formattedEntry = String.format("%-" + (maxKeyLength + 2) + "s:  %s<br><br>", key, value.toString());
                     formattedData.append(formattedEntry);
                 }
 
